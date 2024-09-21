@@ -60,7 +60,7 @@
                 <div>
                     <a class="navbar-brand brand-logo" href="index.html">
                         <!-- <img src="assets/images/logo.svg" alt="logo" /> -->
-                        <h2>ZYLUS</h2>
+                        <h2>ZYLYS</h2>
                     </a>
                     <a class="navbar-brand brand-logo-mini" href="index.html">
                         <!-- <img src="assets/images/logo-mini.svg" alt="logo" /> -->
@@ -87,9 +87,10 @@
                             <span class="input-group-addon input-group-prepend border-right">
                                 <i class="fas fa-clock input-group-text calendar-icon"></i>
                             </span>
-                            <span id="clock" class="form-control">00:00:00</span> <!-- Clock display -->
+                            <span id="clock" class="form-control">00:00:00 AM</span> <!-- Clock display -->
                         </div>
                     </li>
+
                     <li class="nav-item d-none d-lg-block">
                         <div id="datepicker-popup" class="input-group date datepicker navbar-date-picker">
                             <span class="input-group-addon input-group-prepend border-right">
@@ -138,9 +139,11 @@
 
     </nav>
     <!-- partial -->
-    <div class="container-fluid page-body-wrapper">
+    
+    <div class="container-fluid page-body-wrapper" style="margin-left: 250px; padding-top: 110px;">
         <!-- partial:partials/_sidebar.html -->
-        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <nav class="sidebar sidebar-offcanvas" id="sidebar" 
+             style="position: fixed; top: 0; left: 0; height: 100%; width: 250px; z-index: 1000;  overflow-y: auto; padding-top: 110px;">
             <ul class="nav">
                 <li class="nav-item">
                     <a class="nav-link" href="index.html">
@@ -148,50 +151,44 @@
                         <span class="menu-title">Dashboard</span>
                     </a>
                 </li>
-                <!-- <li class="nav-item nav-category">New Invoice</li> -->
                 <li class="nav-item">
                     <a class="nav-link" href="invoice.html">
-                        <!-- <i class="fas fa-file-invoice-dollar"></i> -->
                         <i class="menu-icon fas fa-file-invoice-dollar"></i>
                         <span class="menu-title">New Invoice </span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="manage.html">
-                        <i class="menu-icon fas fa-file-invoice-dollar"></i>
-                        <span class="menu-title">Manage Invoice</span>
-                    </a>
-                </li>
+                
                 <li class="nav-item">
                     <a class="nav-link" href="candidate.html">
                         <i class="menu-icon fas fa-user-tie"></i>
                         <span class="menu-title">Candidate</span>
                     </a>
-
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="client.html">
                         <i class="menu-icon fas fa-building"></i>
                         <span class="menu-title">Clients</span>
                     </a>
-
                 </li>
+               
                 <li class="nav-item">
                     <a class="nav-link" href="scheduling.html">
                         <i class="menu-icon fas fa-calendar-alt"></i>
                         <span class="menu-title">Interview Schedule</span>
                     </a>
-
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="progress.html">
                         <i class="menu-icon fas fa-tasks"></i>
                         <span class="menu-title">Interview Progress</span>
                     </a>
-
                 </li>
-
-
+                <li class="nav-item">
+                    <a class="nav-link" href="user.html">
+                        <i class="menu-icon fas fa-person"></i>
+                        <span class="menu-title">User</span>
+                    </a>
+                </li>
             </ul>
         </nav>
 
@@ -235,9 +232,17 @@
                                                 <td>9876543210</td>
                                                 <td>Standard Terms</td>
                                                 <td><a href="#">View Document</a></td>
-                                                <td><label class="badge badge-success">Active</label></td>
+                                                <!-- <td><label class="badge badge-success">Active</label></td> -->
+                                                <td>
+                                                    <select class="form-select" aria-label="Status" onchange="updateColor(this)" style="background-color: #28a745; color: white; width: 70px;height: 25px;  padding: 2px; font-size: 14px; text-align: center;">
+                                                      <option value="active" style="background-color: #28a745; color: white;">Active</option>
+                                                      <option value="inactive" style="background-color: #dc3545; color: white;">Inactive</option>
+                                                    </select>
+                                                  </td>
+                                                  
                                                 <td class="text-center">
                                                     <div class="dropdown dropdown-action">
+                                                        
                                                         <a href="#" class="" data-bs-toggle="dropdown"
                                                             aria-expanded="false">
                                                             <i class="fa fa-ellipsis-v"></i>
@@ -258,16 +263,23 @@
                                                     </div>
                                                 </td>
                                             </tr>
-                                            </tr>
+                                            <tr>
                                             <td>ABC Pvt Ltd</td>
                                             <td>123 Street, City</td>
-                                            <td>GST123456</td>
-                                            <td>John Doe</td>
-                                            <td>john@example.com</td>
-                                            <td>9876543210</td>
+                                            <td>GST123454</td>
+                                            <td>Jane</td>
+                                            <td>jane@example.com</td>
+                                            <td>1231231231</td>
                                             <td>Standard Terms</td>
                                             <td><a href="#">View Document</a></td>
-                                            <td><label class="badge badge-success">Active</label></td>
+                                            <!-- <td><label class="badge badge-success">Active</label></td> -->
+                                            <td>
+                                                <select class="form-select" aria-label="Status" onchange="updateColor(this)" style="background-color: #28a745; color: white; width: 70px;height: 25px;  padding: 2px; font-size: 14px; text-align: center;">
+                                                  <option value="active" style="background-color: #28a745; color: white;">Active</option>
+                                                  <option value="inactive" style="background-color: #dc3545; color: white;">Inactive</option>
+                                                </select>
+                                              </td>     
+                                                    
                                             <td class="text-center">
                                                 <div class="dropdown dropdown-action">
                                                     <a href="#" class="" data-bs-toggle="dropdown"
@@ -288,6 +300,127 @@
                                                     </div>
                                                 </div>
                                             </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>ABC Pvt Ltd</td>
+                                                <td>123 Street, City</td>
+                                                <td>GST123458</td>
+                                                <td>David</td>
+                                                <td>david@example.com</td>
+                                                <td>2342342342</td>
+                                                <td>Standard Terms</td>
+                                                <td><a href="#">View Document</a></td>
+                                                <!-- <td><label class="badge badge-success">Active</label></td> -->
+                                                <td>
+                                                    <select class="form-select" aria-label="Status" onchange="updateColor(this)" style="background-color: #28a745; color: white; width: 70px;height: 25px;  padding: 2px; font-size: 14px; text-align: center;">
+                                                      <option value="active" style="background-color: #28a745; color: white;">Active</option>
+                                                      <option value="inactive" style="background-color: #dc3545; color: white;">Inactive</option>
+                                                    </select>
+                                                  </td>
+                                                  
+                                                <td class="text-center">
+                                                    <div class="dropdown dropdown-action">
+                                                        
+                                                        <a href="#" class="" data-bs-toggle="dropdown"
+                                                            aria-expanded="false">
+                                                            <i class="fa fa-ellipsis-v"></i>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-right">
+                                                            <!-- Edit Action -->
+                                                            <a class="dropdown-item mb-2" href="#" data-bs-toggle="modal"
+                                                                data-bs-target="#editClientModal" >
+                                                                <i class="fa fa-pencil m-r-5"></i>Edit
+                                                            </a>
+                                                            <!-- Delete Action -->
+                                                            <a class="dropdown-item mb-2" href="#" data-bs-toggle="modal"
+                                                                data-bs-target="#deleteClientModal" >
+                                                                <i class="fa fa-trash m-r-5"></i> Delete
+                                                            </a>
+
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>ABC Pvt Ltd</td>
+                                                <td>123 Street, City</td>
+                                                <td>GST123459</td>
+                                                <td>George</td>
+                                                <td>george@example.com</td>
+                                                <td>1451451451</td>
+                                                <td>Standard Terms</td>
+                                                <td><a href="#">View Document</a></td>
+                                                <!-- <td><label class="badge badge-success">Active</label></td> -->
+                                                <td>
+                                                    <select class="form-select" aria-label="Status" onchange="updateColor(this)" style="background-color: #28a745; color: white; width: 70px;height: 25px;  padding: 2px; font-size: 14px; text-align: center;">
+                                                      <option value="active" style="background-color: #28a745; color: white;">Active</option>
+                                                      <option value="inactive" style="background-color: #dc3545; color: white;">Inactive</option>
+                                                    </select>
+                                                  </td>
+                                                  
+                                                <td class="text-center">
+                                                    <div class="dropdown dropdown-action">
+                                                        
+                                                        <a href="#" class="" data-bs-toggle="dropdown"
+                                                            aria-expanded="false">
+                                                            <i class="fa fa-ellipsis-v"></i>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-right">
+                                                            <!-- Edit Action -->
+                                                            <a class="dropdown-item mb-2" href="#" data-bs-toggle="modal"
+                                                                data-bs-target="#editClientModal" >
+                                                                <i class="fa fa-pencil m-r-5"></i>Edit
+                                                            </a>
+                                                            <!-- Delete Action -->
+                                                            <a class="dropdown-item mb-2" href="#" data-bs-toggle="modal"
+                                                                data-bs-target="#deleteClientModal" >
+                                                                <i class="fa fa-trash m-r-5"></i> Delete
+                                                            </a>
+
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>ABC Pvt Ltd</td>
+                                                <td>123 Street, City</td>
+                                                <td>GST123400</td>
+                                                <td>Kiran</td>
+                                                <td>kiran@example.com</td>
+                                                <td>3453453453</td>
+                                                <td>Standard Terms</td>
+                                                <td><a href="#">View Document</a></td>
+                                                <!-- <td><label class="badge badge-success">Active</label></td> -->
+                                                <td>
+                                                    <select class="form-select" aria-label="Status" onchange="updateColor(this)" style="background-color: #28a745; color: white; width: 70px;height: 25px;  padding: 2px; font-size: 14px; text-align: center;">
+                                                      <option value="active" style="background-color: #28a745; color: white;">Active</option>
+                                                      <option value="inactive" style="background-color: #dc3545; color: white;">Inactive</option>
+                                                    </select>
+                                                  </td>
+                                                  
+                                                <td class="text-center">
+                                                    <div class="dropdown dropdown-action">
+                                                        
+                                                        <a href="#" class="" data-bs-toggle="dropdown"
+                                                            aria-expanded="false">
+                                                            <i class="fa fa-ellipsis-v"></i>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-right">
+                                                            <!-- Edit Action -->
+                                                            <a class="dropdown-item mb-2" href="#" data-bs-toggle="modal"
+                                                                data-bs-target="#editClientModal" >
+                                                                <i class="fa fa-pencil m-r-5"></i>Edit
+                                                            </a>
+                                                            <!-- Delete Action -->
+                                                            <a class="dropdown-item mb-2" href="#" data-bs-toggle="modal"
+                                                                data-bs-target="#deleteClientModal" >
+                                                                <i class="fa fa-trash m-r-5"></i> Delete
+                                                            </a>
+
+                                                        </div>
+                                                    </div>
+                                                </td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -404,19 +537,6 @@
 
                                         </div>
 
-
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <select class="form-select" id="status" style="height: 45px;">
-                                                        <option selected disabled>Select Status</option>
-                                                        <option value="active">Active</option>
-                                                        <option value="inactive">Inactive</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-
                                         <div class="button-container text-end">
                                             <button type="submit"
                                                 class="button btn btn-primary"><span>Submit</span></button>
@@ -527,18 +647,6 @@
                                             </div>
                                         </div>
 
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <select class="form-select" id="status" style="height: 45px;">
-                                                        <option selected disabled>Select Status</option>
-                                                        <option value="active">Active</option>
-                                                        <option value="inactive">Inactive</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-
                                         <div class="button-container text-end">
                                             <button type="submit"
                                                 class="button btn btn-primary"><span>Submit</span></button>
@@ -599,25 +707,54 @@
 <script src="assets/js/dashboard.js"></script>
 <!-- <script src="assets/js/Chart.roundedBarCharts.js"></script> -->
 <!-- End custom js for this page-->
-
+  
 <script>
     function updateClock() {
+        const clockElement = document.getElementById('clock');
         const now = new Date();
-        const hours = now.getHours().toString().padStart(2, '0');
-        const minutes = now.getMinutes().toString().padStart(2, '0');
-        const seconds = now.getSeconds().toString().padStart(2, '0');
 
-        document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+        // Get hours, minutes, and seconds
+        let hours = now.getHours();
+        let minutes = now.getMinutes();
+        let seconds = now.getSeconds();
+        let period = 'AM';
+
+        // Convert to 12-hour format
+        if (hours >= 12) {
+            period = 'PM';
+            hours = hours > 12 ? hours - 12 : hours; // Convert 13-23 hours to 1-11 PM
+        }
+        if (hours === 0) {
+            hours = 12; // Midnight edge case (0:00 should be 12 AM)
+        }
+
+        // Ensure 2-digit format for minutes and seconds
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        seconds = seconds < 10 ? '0' + seconds : seconds;
+
+        // Update clock display
+        clockElement.textContent = `${hours}:${minutes}:${seconds} ${period}`;
     }
 
     // Update the clock every second
     setInterval(updateClock, 1000);
 
-    // Initial call to set the clock immediately
+    // Initialize the clock display immediately
     updateClock();
 </script>
 
 
+<script>
+    function updateColor(select) {
+      if (select.value === 'active') {
+        select.style.backgroundColor = '#28a745';  // Green for Active
+        select.style.color = 'white';
+      } else if (select.value === 'inactive') {
+        select.style.backgroundColor = '#dc3545';  // Red for Inactive
+        select.style.color = 'white';
+      }
+    }
+  </script>
 </body>
 
 </html>

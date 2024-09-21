@@ -139,11 +139,11 @@
 
     </nav>
     <!-- partial -->
-
+    
     <div class="container-fluid page-body-wrapper" style="margin-left: 250px; padding-top: 110px;">
         <!-- partial:partials/_sidebar.html -->
-        <nav class="sidebar sidebar-offcanvas" id="sidebar"
-            style="position: fixed; top: 0; left: 0; height: 100%; width: 250px; z-index: 1000;  overflow-y: auto; padding-top: 110px;">
+        <nav class="sidebar sidebar-offcanvas" id="sidebar" 
+             style="position: fixed; top: 0; left: 0; height: 100%; width: 250px; z-index: 1000;  overflow-y: auto; padding-top: 110px;">
             <ul class="nav">
                 <li class="nav-item">
                     <a class="nav-link" href="index.html">
@@ -157,12 +157,7 @@
                         <span class="menu-title">New Invoice </span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="manage.html">
-                        <i class="menu-icon fas fa-file-invoice-dollar"></i>
-                        <span class="menu-title">Manage Invoice</span>
-                    </a>
-                </li>
+                
                 <li class="nav-item">
                     <a class="nav-link" href="candidate.html">
                         <i class="menu-icon fas fa-user-tie"></i>
@@ -175,6 +170,7 @@
                         <span class="menu-title">Clients</span>
                     </a>
                 </li>
+               
                 <li class="nav-item">
                     <a class="nav-link" href="scheduling.html">
                         <i class="menu-icon fas fa-calendar-alt"></i>
@@ -185,6 +181,12 @@
                     <a class="nav-link" href="progress.html">
                         <i class="menu-icon fas fa-tasks"></i>
                         <span class="menu-title">Interview Progress</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="user.html">
+                        <i class="menu-icon fas fa-person"></i>
+                        <span class="menu-title">User</span>
                     </a>
                 </li>
             </ul>
@@ -230,75 +232,35 @@
                                                 <td>Software Engineer</td>
                                                 <td>John Doe</td>
                                                 <td>5 Years</td>
-                                                <td>+1234567890</td>
+                                                <td>1234567890</td>
                                                 <td>john.doe@example.com</td>
                                                 <td>19/09/2024</td>
                                                 <td>Emily Smith</td>
-                                                <td><label class="badge badge-danger">Pending</label></td>
-                                                <td class="text-center">
-                                                    <div class="dropdown dropdown-action">
-                                                        <a href="#" class="" data-bs-toggle="dropdown"
-                                                            aria-expanded="false">
-                                                            <i class="fa fa-ellipsis-v"></i>
-                                                        </a>
-                                                        <div class="dropdown-menu dropdown-menu-right">
-                                                            <!-- Edit Action -->
-                                                            <a class="dropdown-item mb-2" href="#"
-                                                                data-bs-toggle="modal"
-                                                                data-bs-target="#editCandidateModal">
-                                                                <i class="fa fa-pencil m-r-5"></i> Edit
-                                                            </a>
-
-                                                            <!-- Delete Action -->
-                                                            <a class="dropdown-item mb-2" href="#"
-                                                                data-bs-toggle="modal"
-                                                                data-bs-target="#deleteCandidateModal">
-                                                                <i class="fa fa-trash m-r-5"></i> Delete
-                                                            </a>
-
-                                                            <!-- View More Action -->
-                                                            <a class="dropdown-item" href="#">
-                                                                <span>
-                                                                    <i class="fa fa-eye"></i> View more
-                                                                </span>
-                                                            </a>
-                                                        </div>
+                                                <td>
+                                                    <div class="dropdown">
+                                                        <button class="btn btn-secondary dropdown-toggle btn-sm" type="button" id="statusDropdown1" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #dc3545; border-color: #dc3545; color: #fff;">
+                                                            <span id="statusText1">Pending</span>
+                                                        </button>
+                                                        <ul class="dropdown-menu" aria-labelledby="statusDropdown1">
+                                                            <li><a class="dropdown-item" href="#" onclick="selectStatus(this, 'Pending', 'badge badge-danger', '#dc3545')">Pending</a></li>
+                                                            <li><a class="dropdown-item" href="#" onclick="selectStatus(this, 'In Progress', 'badge badge-success', '#28a745')">In Progress</a></li>
+                                                           
+                                                            <li><a class="dropdown-item" href="#" onclick="selectStatus(this, 'Completed', 'badge badge-primary', '#007bff')">Completed</a></li>
+                                                        </ul>
                                                     </div>
                                                 </td>
-                                            <tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>2023-09-01</td>
-                                                <td>Software Engineer</td>
-                                                <td>John Doe</td>
-                                                <td>5 Years</td>
-                                                <td>+1234567890</td>
-                                                <td>john.doe@example.com</td>
-                                                <td>Available</td>
-                                                <td>Emily Smith</td>
-                                                <td><label class="badge badge-warning">In progress</label></td>
                                                 <td class="text-center">
                                                     <div class="dropdown dropdown-action">
-                                                        <a href="#" class="" data-bs-toggle="dropdown"
-                                                            aria-expanded="false">
+                                                        <a href="#" class="" data-bs-toggle="dropdown" aria-expanded="false">
                                                             <i class="fa fa-ellipsis-v"></i>
                                                         </a>
                                                         <div class="dropdown-menu dropdown-menu-right">
-                                                            <!-- Edit Action -->
-                                                            <a class="dropdown-item mb-2" href="#"
-                                                                data-bs-toggle="modal"
-                                                                data-bs-target="#editCandidateModal">
+                                                            <a class="dropdown-item mb-2" href="#" data-bs-toggle="modal" data-bs-target="#editCandidateModal">
                                                                 <i class="fa fa-pencil m-r-5"></i> Edit
                                                             </a>
-
-                                                            <!-- Delete Action -->
-                                                            <a class="dropdown-item mb-2" href="#"
-                                                                data-bs-toggle="modal"
-                                                                data-bs-target="#deleteCandidateModal">
+                                                            <a class="dropdown-item mb-2" href="#" data-bs-toggle="modal" data-bs-target="#deleteCandidateModal">
                                                                 <i class="fa fa-trash m-r-5"></i> Delete
                                                             </a>
-
-                                                            <!-- View More Action -->
                                                             <a class="dropdown-item" href="#">
                                                                 <span>
                                                                     <i class="fa fa-eye"></i> View more
@@ -309,38 +271,39 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>1</td>
-                                                <td>2023-09-01</td>
-                                                <td>Software Engineer</td>
-                                                <td>John Doe</td>
-                                                <td>5 Years</td>
-                                                <td>+1234567890</td>
-                                                <td>john.doe@example.com</td>
-                                                <td>Available</td>
-                                                <td>Emily Smith</td>
-                                                <td><label class="badge badge-info">Fixed</label></td>
+                                                <td>2</td>
+                                                <td>2023-09-11</td>
+                                                <td>Tester</td>
+                                                <td>John </td>
+                                                <td>6 Years</td>
+                                                <td>1231231231</td>
+                                                <td>jOHN@example.com</td>
+                                                <td>20/09/2024</td>
+                                                <td>David</td>
+                                                <td>
+                                                    <div class="dropdown">
+                                                        <button class="btn btn-secondary dropdown-toggle btn-sm" type="button" id="statusDropdown2" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #28a745; border-color: #28a745; color: #fff;">
+                                                            <span id="statusText2">Approved</span>
+                                                        </button>
+                                                        <ul class="dropdown-menu" aria-labelledby="statusDropdown2">
+                                                            <li><a class="dropdown-item" href="#" onclick="selectStatus(this, 'Pending', 'badge badge-danger', '#dc3545')">Pending</a></li>
+                                                            <li><a class="dropdown-item" href="#" onclick="selectStatus(this, 'In Progress', 'badge badge-success', '#28a745')">In Progress</a></li>
+                                                            <li><a class="dropdown-item" href="#" onclick="selectStatus(this, 'Completed', 'badge badge-primary', '#007bff')">Completed</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
                                                 <td class="text-center">
                                                     <div class="dropdown dropdown-action">
-                                                        <a href="#" class="" data-bs-toggle="dropdown"
-                                                            aria-expanded="false">
+                                                        <a href="#" class="" data-bs-toggle="dropdown" aria-expanded="false">
                                                             <i class="fa fa-ellipsis-v"></i>
                                                         </a>
                                                         <div class="dropdown-menu dropdown-menu-right">
-                                                            <!-- Edit Action -->
-                                                            <a class="dropdown-item mb-2" href="#"
-                                                                data-bs-toggle="modal"
-                                                                data-bs-target="#editCandidateModal">
+                                                            <a class="dropdown-item mb-2" href="#" data-bs-toggle="modal" data-bs-target="#editCandidateModal">
                                                                 <i class="fa fa-pencil m-r-5"></i> Edit
                                                             </a>
-
-                                                            <!-- Delete Action -->
-                                                            <a class="dropdown-item mb-2" href="#"
-                                                                data-bs-toggle="modal"
-                                                                data-bs-target="#deleteCandidateModal">
+                                                            <a class="dropdown-item mb-2" href="#" data-bs-toggle="modal" data-bs-target="#deleteCandidateModal">
                                                                 <i class="fa fa-trash m-r-5"></i> Delete
                                                             </a>
-
-                                                            <!-- View More Action -->
                                                             <a class="dropdown-item" href="#">
                                                                 <span>
                                                                     <i class="fa fa-eye"></i> View more
@@ -349,42 +312,84 @@
                                                         </div>
                                                     </div>
                                                 </td>
+                                            </tr>
                                             <tr>
-
-
-                                            <tr>
-                                                <td>1</td>
-                                                <td>2023-09-01</td>
-                                                <td>Software Engineer</td>
-                                                <td>John Doe</td>
-                                                <td>5 Years</td>
-                                                <td>+1234567890</td>
-                                                <td>john.doe@example.com</td>
+                                                <td>3</td>
+                                                <td>2023-09-19</td>
+                                                <td>Project Manager</td>
+                                                <td>Alice Johnson</td>
+                                                <td>7 Years</td>
+                                                <td>1122334455</td>
+                                                <td>alice.johnson@example.com</td>
                                                 <td>Available</td>
-                                                <td>Emily Smith</td>
-                                                <td><label class="badge badge-success">Completed</label></td>
+                                                <td>David Wilson</td>
+                                                <td>
+                                                    <div class="dropdown">
+                                                        <button class="btn btn-secondary dropdown-toggle btn-sm" type="button" id="statusDropdown3" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #ffc107; border-color: #ffc107; color: #fff;">
+                                                            <span id="statusText3">Rejected</span>
+                                                        </button>
+                                                        <ul class="dropdown-menu" aria-labelledby="statusDropdown3">
+                                                            <li><a class="dropdown-item" href="#" onclick="selectStatus(this, 'Pending', 'badge badge-danger', '#dc3545')">Pending</a></li>
+                                                            <li><a class="dropdown-item" href="#" onclick="selectStatus(this, 'In Progress', 'badge badge-success', '#28a745')">In Progress</a></li>
+                                                            <li><a class="dropdown-item" href="#" onclick="selectStatus(this, 'Completed', 'badge badge-primary', '#007bff')">Completed</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
                                                 <td class="text-center">
                                                     <div class="dropdown dropdown-action">
-                                                        <a href="#" class="" data-bs-toggle="dropdown"
-                                                            aria-expanded="false">
+                                                        <a href="#" class="" data-bs-toggle="dropdown" aria-expanded="false">
                                                             <i class="fa fa-ellipsis-v"></i>
                                                         </a>
                                                         <div class="dropdown-menu dropdown-menu-right">
-                                                            <!-- Edit Action -->
-                                                            <a class="dropdown-item mb-2" href="#"
-                                                                data-bs-toggle="modal"
-                                                                data-bs-target="#editCandidateModal">
+                                                            <a class="dropdown-item mb-2" href="#" data-bs-toggle="modal" data-bs-target="#editCandidateModal">
                                                                 <i class="fa fa-pencil m-r-5"></i> Edit
                                                             </a>
-
-                                                            <!-- Delete Action -->
-                                                            <a class="dropdown-item mb-2" href="#"
-                                                                data-bs-toggle="modal"
-                                                                data-bs-target="#deleteCandidateModal">
+                                                            <a class="dropdown-item mb-2" href="#" data-bs-toggle="modal" data-bs-target="#deleteCandidateModal">
                                                                 <i class="fa fa-trash m-r-5"></i> Delete
                                                             </a>
-
-                                                            <!-- View More Action -->
+                                                            <a class="dropdown-item" href="#">
+                                                                <span>
+                                                                    <i class="fa fa-eye"></i> View more
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>2023-09-20</td>
+                                                <td>UX Designer</td>
+                                                <td>Michael Taylor</td>
+                                                <td>4 Years</td>
+                                                <td>2233445566</td>
+                                                <td>michael.taylor@example.com</td>
+                                                <td>Available</td>
+                                                <td>Jessica Davis</td>
+                                                <td>
+                                                    <div class="dropdown">
+                                                        <button class="btn btn-secondary dropdown-toggle btn-sm" type="button" id="statusDropdown4" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #007bff; border-color: #007bff; color: #fff;">
+                                                            <span id="statusText4">Completed</span>
+                                                        </button>
+                                                        <ul class="dropdown-menu" aria-labelledby="statusDropdown4">
+                                                            <li><a class="dropdown-item" href="#" onclick="selectStatus(this, 'Pending', 'badge badge-danger', '#dc3545')">Pending</a></li>
+                                                            <li><a class="dropdown-item" href="#" onclick="selectStatus(this, 'In Progress', 'badge badge-success', '#28a745')">In Progress</a></li>
+                                                            <li><a class="dropdown-item" href="#" onclick="selectStatus(this, 'Completed', 'badge badge-primary', '#007bff')">Completed</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">
+                                                    <div class="dropdown dropdown-action">
+                                                        <a href="#" class="" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="fa fa-ellipsis-v"></i>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-right">
+                                                            <a class="dropdown-item mb-2" href="#" data-bs-toggle="modal" data-bs-target="#editCandidateModal">
+                                                                <i class="fa fa-pencil m-r-5"></i> Edit
+                                                            </a>
+                                                            <a class="dropdown-item mb-2" href="#" data-bs-toggle="modal" data-bs-target="#deleteCandidateModal">
+                                                                <i class="fa fa-trash m-r-5"></i> Delete
+                                                            </a>
                                                             <a class="dropdown-item" href="#">
                                                                 <span>
                                                                     <i class="fa fa-eye"></i> View more
@@ -396,38 +401,39 @@
                                             </tr>
 
                                             <tr>
-                                                <td>1</td>
-                                                <td>2023-09-01</td>
-                                                <td>Software Engineer</td>
-                                                <td>John Doe</td>
-                                                <td>5 Years</td>
-                                                <td>+1234567890</td>
-                                                <td>john.doe@example.com</td>
+                                                <td>5</td>
+                                                <td>2023-09-22</td>
+                                                <td>Tester</td>
+                                                <td>Jacob Samuel</td>
+                                                <td>4 Years</td>
+                                                <td>25252525232</td>
+                                                <td>jacob@example.com</td>
                                                 <td>Available</td>
-                                                <td>Emily Smith</td>
-                                                <td><label class="badge badge-warning">In progress</label></td>
+                                                <td>Kevin Thomas</td>
+                                                <td>
+                                                    <div class="dropdown">
+                                                        <button class="btn btn-secondary dropdown-toggle btn-sm" type="button" id="statusDropdown4" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #007bff; border-color: #007bff; color: #fff;">
+                                                            <span id="statusText4">Pending</span>
+                                                        </button>
+                                                        <ul class="dropdown-menu" aria-labelledby="statusDropdown4">
+                                                            <li><a class="dropdown-item" href="#" onclick="selectStatus(this, 'Pending', 'badge badge-danger', '#dc3545')">Pending</a></li>
+                                                            <li><a class="dropdown-item" href="#" onclick="selectStatus(this, 'In Progress', 'badge badge-success', '#28a745')">In Progress</a></li>
+                                                            <li><a class="dropdown-item" href="#" onclick="selectStatus(this, 'Completed', 'badge badge-primary', '#007bff')">Completed</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
                                                 <td class="text-center">
                                                     <div class="dropdown dropdown-action">
-                                                        <a href="#" class="" data-bs-toggle="dropdown"
-                                                            aria-expanded="false">
+                                                        <a href="#" class="" data-bs-toggle="dropdown" aria-expanded="false">
                                                             <i class="fa fa-ellipsis-v"></i>
                                                         </a>
                                                         <div class="dropdown-menu dropdown-menu-right">
-                                                            <!-- Edit Action -->
-                                                            <a class="dropdown-item mb-2" href="#"
-                                                                data-bs-toggle="modal"
-                                                                data-bs-target="#editCandidateModal">
+                                                            <a class="dropdown-item mb-2" href="#" data-bs-toggle="modal" data-bs-target="#editCandidateModal">
                                                                 <i class="fa fa-pencil m-r-5"></i> Edit
                                                             </a>
-
-                                                            <!-- Delete Action -->
-                                                            <a class="dropdown-item mb-2" href="#"
-                                                                data-bs-toggle="modal"
-                                                                data-bs-target="#deleteCandidateModal">
+                                                            <a class="dropdown-item mb-2" href="#" data-bs-toggle="modal" data-bs-target="#deleteCandidateModal">
                                                                 <i class="fa fa-trash m-r-5"></i> Delete
                                                             </a>
-
-                                                            <!-- View More Action -->
                                                             <a class="dropdown-item" href="#">
                                                                 <span>
                                                                     <i class="fa fa-eye"></i> View more
@@ -437,10 +443,8 @@
                                                     </div>
                                                 </td>
                                             </tr>
-
-
-
                                         </tbody>
+                                        
                                     </table>
                                 </div>
                             </div>
@@ -610,7 +614,7 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-4">
+                                    <div class="col-md-6">
                                         <div class="form-group">
                                             <select class="form-control" id="client" style="height: 35px;">
                                                 <option selected disabled>Select Client</option>
@@ -621,7 +625,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-6">
                                         <div class="form-group">
                                             <select class="form-select" id="recruiter" style="height: 35px;">
                                                 <option selected disabled>Select Recruiter</option>
@@ -632,7 +636,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
+                                    <!-- <div class="col-md-4">
                                         <div class="form-group">
                                             <select class="form-select" id="recruiter" style="height: 35px;">
                                                 <option selected disabled>Select Status</option>
@@ -641,7 +645,7 @@
                                                 <option value="pending">Pending</option>
                                             </select>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
@@ -836,7 +840,7 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-4">
+                                    <div class="col-md-6">
                                         <div class="form-group">
                                             <select class="form-control" id="client" style="height: 35px;">
                                                 <option selected disabled>Select Client</option>
@@ -847,7 +851,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-6">
                                         <div class="form-group">
                                             <select class="form-select" id="recruiter" style="height: 35px;">
                                                 <option selected disabled>Select Recruiter</option>
@@ -858,7 +862,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
+                                    <!-- <div class="col-md-4">
                                         <div class="form-group">
                                             <select class="form-select" id="recruiter" style="height: 35px;">
                                                 <option selected disabled>Select Status</option>
@@ -867,7 +871,7 @@
                                                 <option value="pending">Pending</option>
                                             </select>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
@@ -901,8 +905,6 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </div>
@@ -965,24 +967,43 @@
     <script src="assets/js/dashboard.js"></script>
     <!-- <script src="assets/js/Chart.roundedBarCharts.js"></script> -->
     <!-- End custom js for this page-->
-    <script>
-        function updateClock() {
-            const now = new Date();
-            const hours = now.getHours().toString().padStart(2, '0');
-            const minutes = now.getMinutes().toString().padStart(2, '0');
-            const seconds = now.getSeconds().toString().padStart(2, '0');
+     
+<script>
+    function updateClock() {
+        const clockElement = document.getElementById('clock');
+        const now = new Date();
 
-            document.getElementById('clock').textContent = hours + ':' + minutes + ':' + seconds;
+        // Get hours, minutes, and seconds
+        let hours = now.getHours();
+        let minutes = now.getMinutes();
+        let seconds = now.getSeconds();
+        let period = 'AM';
+
+        // Convert to 12-hour format
+        if (hours >= 12) {
+            period = 'PM';
+            hours = hours > 12 ? hours - 12 : hours; // Convert 13-23 hours to 1-11 PM
+        }
+        if (hours === 0) {
+            hours = 12; // Midnight edge case (0:00 should be 12 AM)
         }
 
-        // Update the clock every second
-        setInterval(updateClock, 1000);
+        // Ensure 2-digit format for minutes and seconds
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        seconds = seconds < 10 ? '0' + seconds : seconds;
 
-        // Initial call to set the clock immediately
-        updateClock();
-    </script>
+        // Update clock display
+        clockElement.textContent = `${hours}:${minutes}:${seconds} ${period}`;
+    }
 
+    // Update the clock every second
+    setInterval(updateClock, 1000);
 
+    // Initialize the clock display immediately
+    updateClock();
+</script>
+
+   
 </body>
 
 </html>

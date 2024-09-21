@@ -25,38 +25,6 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- endinject -->
     <link rel="shortcut icon" href="assets/images/favicon.png" />
-    <style>
-        @media print {
-
-            /* Hide all elements */
-            .sidebar,
-            .navbar * {
-                display: none !important;
-            }
-
-            /* Only show the form and its immediate container */
-            .main-panel,
-            .content-wrapper,
-            .row,
-            .card,
-            .card-body {
-                display: block !important;
-            }
-
-            /* Ensure form container is visible */
-            #companyForm {
-                display: block !important;
-            }
-
-            .btn-primary[onclick="calculateInvoice()"],
-            .btn-primary[onclick="printInvoice()"],
-            .btn-primary[onclick="downloadInvoice()"],
-            .btn-primary[type="submit"],
-            .btn-light {
-                display: none !important;
-            }
-        }
-    </style>
 
 </head>
 
@@ -92,7 +60,7 @@
                 <div>
                     <a class="navbar-brand brand-logo" href="index.html">
                         <!-- <img src="assets/images/logo.svg" alt="logo" /> -->
-                        <h2>ZYLUS</h2>
+                        <h2>ZYLYS</h2>
                     </a>
                     <a class="navbar-brand brand-logo-mini" href="index.html">
                         <!-- <img src="assets/images/logo-mini.svg" alt="logo" /> -->
@@ -119,9 +87,10 @@
                             <span class="input-group-addon input-group-prepend border-right">
                                 <i class="fas fa-clock input-group-text calendar-icon"></i>
                             </span>
-                            <span id="clock" class="form-control">00:00:00</span> <!-- Clock display -->
+                            <span id="clock" class="form-control">00:00:00 AM</span> <!-- Clock display -->
                         </div>
                     </li>
+
                     <li class="nav-item d-none d-lg-block">
                         <div id="datepicker-popup" class="input-group date datepicker navbar-date-picker">
                             <span class="input-group-addon input-group-prepend border-right">
@@ -170,9 +139,11 @@
 
     </nav>
     <!-- partial -->
-    <div class="container-fluid page-body-wrapper">
+    
+    <div class="container-fluid page-body-wrapper" style="margin-left: 250px; padding-top: 110px;">
         <!-- partial:partials/_sidebar.html -->
-        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <nav class="sidebar sidebar-offcanvas" id="sidebar" 
+             style="position: fixed; top: 0; left: 0; height: 100%; width: 250px; z-index: 1000;  overflow-y: auto; padding-top: 110px;">
             <ul class="nav">
                 <li class="nav-item">
                     <a class="nav-link" href="index.html">
@@ -180,45 +151,42 @@
                         <span class="menu-title">Dashboard</span>
                     </a>
                 </li>
-                <!-- <li class="nav-item nav-category">New Invoice</li> -->
                 <li class="nav-item">
                     <a class="nav-link" href="invoice.html">
-                        <!-- <i class="fas fa-file-invoice-dollar"></i> -->
                         <i class="menu-icon fas fa-file-invoice-dollar"></i>
                         <span class="menu-title">New Invoice </span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="manage.html">
-                        <i class="menu-icon fas fa-file-invoice-dollar"></i>
-                        <span class="menu-title">Manage Invoice</span>
-                    </a>
-                </li>
+                
                 <li class="nav-item">
                     <a class="nav-link" href="candidate.html">
                         <i class="menu-icon fas fa-user-tie"></i>
                         <span class="menu-title">Candidate</span>
                     </a>
-
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="client.html">
                         <i class="menu-icon fas fa-building"></i>
                         <span class="menu-title">Clients</span>
                     </a>
-
                 </li>
+               
                 <li class="nav-item">
                     <a class="nav-link" href="scheduling.html">
                         <i class="menu-icon fas fa-calendar-alt"></i>
                         <span class="menu-title">Interview Schedule</span>
                     </a>
-
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="progress.html">
                         <i class="menu-icon fas fa-tasks"></i>
                         <span class="menu-title">Interview Progress</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="user.html">
+                        <i class="menu-icon fas fa-person"></i>
+                        <span class="menu-title">User</span>
                     </a>
                 </li>
             </ul>
@@ -229,64 +197,64 @@
         <div class="main-panel">
             <div class="content-wrapper">
                 <!-- Combined Form -->
+                <div class="mb-4  d-flex justify-content-end">
+                    <button type="button"  class="btn btn-secondary me-0" style="background-color: #1f3bb3; border-color: #1f3bb3;" onclick="window.location.href='manage.html'">Manage Invoice</button>
+                </div>
+                
                 <div class="row">
-                    <div class="col-lg-12 grid-margin stretch-card" style="max-width: 80%; margin: 0 auto;">
+                    <div class="col-lg-12 grid-margin stretch-card" style="max-width: 80%; margin: 0 auto; padding-left:20px;">
                         <div class="card">
                             <div class="card-body">
-                                <h3 class="mb-4">Invoice Details</h3>
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <h3 class="mb-0">Who is this Invoice to</h3>
+                                    <div class="form-group d-flex align-items-center mb-0" style="flex: 0 0 40%; max-width: 40%;">
+                                        <label for="invoice-number" class="col-sm-4 col-form-label mb-0" style="padding-right: 0;">Invoice Number</label>
+                                        <div class="col-sm-8" style="padding-left: 0;">
+                                            <input type="text" class="form-control" id="invoice-number" placeholder="INV-12345">
+                                        </div>
+                                    </div>
+                                </div>
                                 <form class="forms-sample">
-                                    <!-- First Form Section -->
-                                    <div class="mb-4">
-                                        <h4>Who is this Invoice to</h4>
-                                        <div class="d-flex justify-content-between align-items-center mb-4">
-                                            <div class="form-group d-flex align-items-center mb-0" style="flex: 0 0 40%; max-width: 40%;">
-                                                <label for="invoice-number" class="col-sm-4 col-form-label mb-0" style="padding-right: 0;">Invoice Number</label>
-                                                <div class="col-sm-8" style="padding-left: 0;">
-                                                    <input type="text" class="form-control" id="invoice-number" placeholder="INV-12345">
-                                                </div>
-                                            </div>
+                                    <div class="form-group row">
+                                        <label for="name" class="col-sm-3 col-form-label">Name</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="name" placeholder="Name">
                                         </div>
-                                        <div class="form-group row">
-                                            <label for="name" class="col-sm-3 col-form-label">Name</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" class="form-control" id="name" placeholder="Name">
-                                            </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="email" class="col-sm-3 col-form-label">Email</label>
+                                        <div class="col-sm-9">
+                                            <input type="email" class="form-control" id="email" placeholder="Email">
                                         </div>
-                                        <div class="form-group row">
-                                            <label for="email" class="col-sm-3 col-form-label">Email</label>
-                                            <div class="col-sm-9">
-                                                <input type="email" class="form-control" id="email" placeholder="Email">
-                                            </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="mobile" class="col-sm-3 col-form-label">Mobile</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="mobile" placeholder="Mobile number">
                                         </div>
-                                        <div class="form-group row">
-                                            <label for="mobile" class="col-sm-3 col-form-label">Mobile</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" class="form-control" id="mobile" placeholder="Mobile number">
-                                            </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="position" class="col-sm-3 col-form-label">Position</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="position" placeholder="Position">
                                         </div>
-                                        <div class="form-group row">
-                                            <label for="position" class="col-sm-3 col-form-label">Position</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" class="form-control" id="position" placeholder="Position">
-                                            </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="gst-number" class="col-sm-3 col-form-label">GST Number</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="gst-number" placeholder="GST-Number">
                                         </div>
-                                        <div class="form-group row">
-                                            <label for="gst-number" class="col-sm-3 col-form-label">GST Number</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" class="form-control" id="gst-number" placeholder="GST-Number">
-                                            </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="date" class="col-sm-3 col-form-label">Date</label>
+                                        <div class="col-sm-9">
+                                            <input type="date" class="form-control" id="date">
                                         </div>
-                                        <div class="form-group row">
-                                            <label for="date" class="col-sm-3 col-form-label">Date</label>
-                                            <div class="col-sm-9">
-                                                <input type="date" class="form-control" id="date">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="description" class="col-sm-3 col-form-label">Description</label>
-                                            <div class="col-sm-9">
-                                                <textarea class="form-control" id="description" rows="3" placeholder="Enter a brief description of the services provided"></textarea>
-                                            </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="description" class="col-sm-3 col-form-label">Description</label>
+                                        <div class="col-sm-9">
+                                            <textarea class="form-control" id="description" rows="3" placeholder="Enter a brief description of the services provided"></textarea>
                                         </div>
                                     </div>
         
@@ -324,7 +292,7 @@
                                             <input type="number" class="form-control" id="totalAmount" placeholder="Total Amount" disabled>
                                         </div>
                                     </div>
-                                    
+        
                                     <div class="d-flex justify-content-end">
                                         <button type="button" class="btn btn-primary me-2" onclick="calculateInvoice()">Generate Invoice</button>
                                         <button type="button" class="btn btn-primary me-2" onclick="printInvoice()">Print</button>
@@ -335,118 +303,142 @@
                         </div>
                     </div>
                 </div>
+                <!-- content-wrapper ends -->
             </div>
-            <!-- content-wrapper ends -->
+            <!-- main-panel ends -->
         </div>
-        <!-- main-panel ends -->
         
 
 
-<script src="assets/vendors/js/vendor.bundle.base.js"></script>
-<script src="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
-<!-- endinject -->
-<!-- Plugin js for this page -->
-<script src="assets/vendors/chart.js/chart.umd.js"></script>
-<script src="assets/vendors/progressbar.js/progressbar.min.js"></script>
-<!-- End plugin js for this page -->
-<!-- inject:js -->
-<script src="assets/js/off-canvas.js"></script>
-<script src="assets/js/template.js"></script>
-<script src="assets/js/settings.js"></script>
-<script src="assets/js/hoverable-collapse.js"></script>
-<script src="assets/js/todolist.js"></script>
-<!-- endinject -->
-<!-- Custom js for this page-->
-<script src="assets/js/jquery.cookie.js" type="text/javascript"></script>
-<script src="assets/js/dashboard.js"></script>
-<!-- <script src="assets/js/Chart.roundedBarCharts.js"></script> -->
-<!-- End custom js for this page-->
-<!-- End plugin js for this page-->
+
+    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="assets/vendors/chart.js/chart.umd.js"></script>
+    <script src="assets/vendors/progressbar.js/progressbar.min.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="assets/js/off-canvas.js"></script>
+    <script src="assets/js/template.js"></script>
+    <script src="assets/js/settings.js"></script>
+    <script src="assets/js/hoverable-collapse.js"></script>
+    <script src="assets/js/todolist.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page-->
+    <script src="assets/js/jquery.cookie.js" type="text/javascript"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <!-- <script src="assets/js/Chart.roundedBarCharts.js"></script> -->
+    <!-- End custom js for this page-->
+    <!-- End plugin js for this page-->
+      
 <script>
-    // Clock script
     function updateClock() {
+        const clockElement = document.getElementById('clock');
         const now = new Date();
-        const hours = now.getHours().toString().padStart(2, '0');
-        const minutes = now.getMinutes().toString().padStart(2, '0');
-        const seconds = now.getSeconds().toString().padStart(2, '0');
-        document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+
+        // Get hours, minutes, and seconds
+        let hours = now.getHours();
+        let minutes = now.getMinutes();
+        let seconds = now.getSeconds();
+        let period = 'AM';
+
+        // Convert to 12-hour format
+        if (hours >= 12) {
+            period = 'PM';
+            hours = hours > 12 ? hours - 12 : hours; // Convert 13-23 hours to 1-11 PM
+        }
+        if (hours === 0) {
+            hours = 12; // Midnight edge case (0:00 should be 12 AM)
+        }
+
+        // Ensure 2-digit format for minutes and seconds
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        seconds = seconds < 10 ? '0' + seconds : seconds;
+
+        // Update clock display
+        clockElement.textContent = `${hours}:${minutes}:${seconds} ${period}`;
     }
+
+    // Update the clock every second
     setInterval(updateClock, 1000);
+
+    // Initialize the clock display immediately
     updateClock();
 </script>
 
-<!-- Invoice Calculation Script -->
-<script>
-    function calculateInvoice() {
-        // Get form values
-        const serviceCharge = parseFloat(document.getElementById('serviceCharge').value);
-        const gstRate = 18; // Assuming 18% GST rate
-        const tdsAmount = parseFloat(document.getElementById('tdsCalculation').value) || 0; // Default TDS to 0 if not provided
+    <!-- Invoice Calculation Script -->
+    <script>
+        function calculateInvoice() {
+            // Get form values
+            const serviceCharge = parseFloat(document.getElementById('serviceCharge').value);
+            const gstRate = 18; // Assuming 18% GST rate
+            const tdsAmount = parseFloat(document.getElementById('tdsCalculation').value) || 0; // Default TDS to 0 if not provided
 
-        // Validate service charge input
-        if (isNaN(serviceCharge) || serviceCharge <= 0) {
-            alert("Please enter a valid service charge amount.");
-            return;
+            // Validate service charge input
+            if (isNaN(serviceCharge) || serviceCharge <= 0) {
+                alert("Please enter a valid service charge amount.");
+                return;
+            }
+
+            // Calculate GST based on the service charge
+            const gstAmount = (serviceCharge * gstRate) / 100;
+
+            // Calculate total amount after applying GST and subtracting TDS
+            let totalAfterTax = serviceCharge + gstAmount - tdsAmount;
+
+            // Update the fields with calculated values
+            document.getElementById('gstCalculation').value = gstAmount.toFixed(2); // Display calculated GST
+            document.getElementById('Amount').value = serviceCharge.toFixed(2); // Display total amount before tax
+            document.getElementById('totalAmount').value = totalAfterTax.toFixed(2); // Display total amount after taxes and TDS
+
+            alert('Invoice calculated successfully!');
         }
 
-        // Calculate GST based on the service charge
-        const gstAmount = (serviceCharge * gstRate) / 100;
 
-        // Calculate total amount after applying GST and subtracting TDS
-        let totalAfterTax = serviceCharge + gstAmount - tdsAmount;
-
-        // Update the fields with calculated values
-        document.getElementById('gstCalculation').value = gstAmount.toFixed(2); // Display calculated GST
-        document.getElementById('Amount').value = serviceCharge.toFixed(2); // Display total amount before tax
-        document.getElementById('totalAmount').value = totalAfterTax.toFixed(2); // Display total amount after taxes and TDS
-
-        alert('Invoice calculated successfully!');
-    }
+        function printInvoice() {
+            window.print();
+        }
 
 
-    function printInvoice() {
-        window.print();
-    }
+        function downloadInvoice() {
+            // Gather data from the first form
+            const firstFormData = new FormData(document.querySelector('.forms-sample')); // Adjust as necessary
+            const firstData = {};
+            firstFormData.forEach((value, key) => {
+                firstData[key] = value;
+            });
+
+            // Gather data from the second form
+            const secondFormData = new FormData(document.querySelectorAll('.forms-sample')[1]); // Adjust as necessary
+            const secondData = {};
+            secondFormData.forEach((value, key) => {
+                secondData[key] = value;
+            });
+
+            // Combine data from both forms
+            const combinedData = { ...firstData, ...secondData };
+
+            // Convert data to CSV format
+            const csvContent = Object.keys(combinedData)
+                .map(key => `"${key}","${combinedData[key]}"`) // Enclose values in quotes to handle commas
+                .join('\n');
+
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+
+            // Create a download link
+            const a = document.createElement('a');
+            a.href = url;
+            a.setAttribute('download', 'invoice-data.csv');
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
 
 
-    function downloadInvoice() {
-        // Gather data from the first form
-        const firstFormData = new FormData(document.querySelector('.forms-sample')); // Adjust as necessary
-        const firstData = {};
-        firstFormData.forEach((value, key) => {
-            firstData[key] = value;
-        });
-    
-        // Gather data from the second form
-        const secondFormData = new FormData(document.querySelectorAll('.forms-sample')[1]); // Adjust as necessary
-        const secondData = {};
-        secondFormData.forEach((value, key) => {
-            secondData[key] = value;
-        });
-    
-        // Combine data from both forms
-        const combinedData = { ...firstData, ...secondData };
-    
-        // Convert data to CSV format
-        const csvContent = Object.keys(combinedData)
-            .map(key => `"${key}","${combinedData[key]}"`) // Enclose values in quotes to handle commas
-            .join('\n');
-    
-        const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
-        const url = URL.createObjectURL(blob);
-    
-        // Create a download link
-        const a = document.createElement('a');
-        a.href = url;
-        a.setAttribute('download', 'invoice-data.csv');
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
-    }
-    
-
-</script>
+    </script>
 
 
 

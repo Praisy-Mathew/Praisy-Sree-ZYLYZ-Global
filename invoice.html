@@ -220,10 +220,7 @@
                         <i class="menu-icon fas fa-tasks"></i>
                         <span class="menu-title">Interview Progress</span>
                     </a>
-
                 </li>
-
-
             </ul>
         </nav>
 
@@ -231,139 +228,108 @@
         <!-- Main Panel -->
         <div class="main-panel">
             <div class="content-wrapper">
-                <!-- First Form -->
+                <!-- Combined Form -->
                 <div class="row">
                     <div class="col-lg-12 grid-margin stretch-card" style="max-width: 80%; margin: 0 auto;">
                         <div class="card">
                             <div class="card-body">
-                                <div class="d-flex justify-content-between align-items-center mb-4">
-                                    <h3 class="mb-0">Who is this Invoice to</h3>
-                                    <div class="form-group d-flex align-items-center mb-0" style="flex: 0 0 40%; max-width: 40%;">
-                                        <label for="invoice-number" class="col-sm-4 col-form-label mb-0" style="padding-right: 0;">Invoice Number</label>
-                                        <div class="col-sm-8" style="padding-left: 0;">
-                                            <input type="text" class="form-control" id="invoice-number" placeholder="INV-12345">
-                                        </div>
-                                    </div>
-                                </div>
+                                <h3 class="mb-4">Invoice Details</h3>
                                 <form class="forms-sample">
+                                    <!-- First Form Section -->
+                                    <div class="mb-4">
+                                        <h4>Who is this Invoice to</h4>
+                                        <div class="d-flex justify-content-between align-items-center mb-4">
+                                            <div class="form-group d-flex align-items-center mb-0" style="flex: 0 0 40%; max-width: 40%;">
+                                                <label for="invoice-number" class="col-sm-4 col-form-label mb-0" style="padding-right: 0;">Invoice Number</label>
+                                                <div class="col-sm-8" style="padding-left: 0;">
+                                                    <input type="text" class="form-control" id="invoice-number" placeholder="INV-12345">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="name" class="col-sm-3 col-form-label">Name</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="name" placeholder="Name">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="email" class="col-sm-3 col-form-label">Email</label>
+                                            <div class="col-sm-9">
+                                                <input type="email" class="form-control" id="email" placeholder="Email">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="mobile" class="col-sm-3 col-form-label">Mobile</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="mobile" placeholder="Mobile number">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="position" class="col-sm-3 col-form-label">Position</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="position" placeholder="Position">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="gst-number" class="col-sm-3 col-form-label">GST Number</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="gst-number" placeholder="GST-Number">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="date" class="col-sm-3 col-form-label">Date</label>
+                                            <div class="col-sm-9">
+                                                <input type="date" class="form-control" id="date">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="description" class="col-sm-3 col-form-label">Description</label>
+                                            <div class="col-sm-9">
+                                                <textarea class="form-control" id="description" rows="3" placeholder="Enter a brief description of the services provided"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <hr class="my-4"> <!-- Horizontal line -->
+        
+                                    <!-- Second Form Section -->
+                                    <h4>Invoice Details</h4>
                                     <div class="form-group row">
-                                        <label for="name" class="col-sm-3 col-form-label">Name</label>
+                                        <label for="serviceCharge" class="col-sm-3 col-form-label">Service Charge</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="name" placeholder="Name">
+                                            <input type="number" class="form-control" id="serviceCharge" placeholder="Service Charge">
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="email" class="col-sm-3 col-form-label">Email</label>
+                                        <label for="gstCalculation" class="col-sm-3 col-form-label">GST Calculation</label>
                                         <div class="col-sm-9">
-                                            <input type="email" class="form-control" id="email" placeholder="Email">
+                                            <input type="number" class="form-control" id="gstCalculation" placeholder="GST" disabled>
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="mobile" class="col-sm-3 col-form-label">Mobile</label>
+                                        <label for="tdsCalculation" class="col-sm-3 col-form-label">TDS Calculation</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="mobile" placeholder="Mobile number">
+                                            <input type="number" class="form-control" id="tdsCalculation" placeholder="Enter TDS Amount (if applicable)">
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="position" class="col-sm-3 col-form-label">Position</label>
+                                        <label for="Amount" class="col-sm-3 col-form-label">Amount</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="position" placeholder="Position">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="gst-number" class="col-sm-3 col-form-label">GST Number</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="gst-number" placeholder="GST-Number">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="date" class="col-sm-3 col-form-label">Date</label>
-                                        <div class="col-sm-9">
-                                            <input type="date" class="form-control" id="date">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="description" class="col-sm-3 col-form-label">Description</label>
-                                        <div class="col-sm-9">
-                                            <textarea class="form-control" id="description" rows="3"
-                                                placeholder="Enter a brief description of the services provided"></textarea>
-                                        </div>
-                                    </div>
-                                    <!-- <button type="submit" class="btn btn-primary me-2">Submit</button>
-                                    <button class="btn btn-light">Cancel</button> -->
-                                    <div class="d-flex justify-content-end">
-                                        <button type="submit" class="btn btn-primary me-2">Submit</button>
-                                        <button class="btn btn-light">Cancel</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-
-                <!-- Second Form -->
-                <div class="row mt-5">
-                    <div class="col-lg-12 grid-margin stretch-card" style="max-width: 80%; margin: 0 auto;">
-                        <div class="card">
-                            <div class="card-body">
-                                <h3>Invoice Details</h3><br>
-                                <form class="forms-sample">
-                                    <div class="form-group row">
-                                        <label for="serviceCharge" class="col-sm-3 col-form-label">Service
-                                            Charge</label>
-                                        <div class="col-sm-9">
-                                            <input type="number" class="form-control" id="serviceCharge"
-                                                placeholder="Service Charge">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="gstCalculation" class="col-sm-3 col-form-label">GST
-                                            Calculation</label>
-                                        <div class="col-sm-9">
-                                            <input type="number" class="form-control" id="gstCalculation"
-                                                placeholder="GST" disabled>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="tdsCalculation" class="col-sm-3 col-form-label">TDS
-                                            Calculation</label>
-                                        <div class="col-sm-9">
-                                            <input type="number" class="form-control" id="tdsCalculation"
-                                                placeholder="Enter TDS Amount (if applicable)">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="totalAmount" class="col-sm-3 col-form-label"> Amount</label>
-                                        <div class="col-sm-9">
-                                            <input type="number" class="form-control" id="Amount" placeholder="Amount"
-                                                disabled>
+                                            <input type="number" class="form-control" id="Amount" placeholder="Amount" disabled>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="totalAmount" class="col-sm-3 col-form-label">Total Amount</label>
                                         <div class="col-sm-9">
-                                            <input type="number" class="form-control" id="totalAmount"
-                                                placeholder="Total Amount" disabled>
+                                            <input type="number" class="form-control" id="totalAmount" placeholder="Total Amount" disabled>
                                         </div>
                                     </div>
-                                    <!-- Action Buttons -->
-                                    <!-- <button type="button" class="btn btn-primary" onclick="calculateInvoice()">Generate
-                                        Invoice</button>
-
-                                    <button type="button" class="btn btn-primary"
-                                        onclick="printInvoice()">Print</button>
-
-                                    <button type="button" class="btn btn-primary"
-                                        onclick="downloadInvoice()">Download</button> -->
-                                        <div class="d-flex justify-content-end">
-                                            <button type="button" class="btn btn-primary me-2" onclick="calculateInvoice()">Generate Invoice</button>
-                                            <button type="button" class="btn btn-primary me-2" onclick="printInvoice()">Print</button>
-                                            <button type="button" class="btn btn-primary" onclick="downloadInvoice()">Download</button>
-
-                                        </div>
-                                        
+                                    
+                                    <div class="d-flex justify-content-end">
+                                        <button type="button" class="btn btn-primary me-2" onclick="calculateInvoice()">Generate Invoice</button>
+                                        <button type="button" class="btn btn-primary me-2" onclick="printInvoice()">Print</button>
+                                        <button type="button" class="btn btn-primary" onclick="downloadInvoice()">Download</button>
+                                    </div>
                                 </form>
                             </div>
                         </div>
@@ -373,9 +339,7 @@
             <!-- content-wrapper ends -->
         </div>
         <!-- main-panel ends -->
-    </div>
-    <!-- page-body-wrapper ends -->
-</div>
+        
 
 
 <script src="assets/vendors/js/vendor.bundle.base.js"></script>

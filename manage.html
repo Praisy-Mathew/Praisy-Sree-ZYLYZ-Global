@@ -350,12 +350,12 @@
                                                         </a>
                                                         <div class="dropdown-menu dropdown-menu-right">
                                                             <!-- Edit Action -->
-                                                            <a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                                            <a class="dropdown-item mb-2" href="#" data-bs-toggle="modal"
                                                                 data-bs-target="#editProgressModal">
                                                                 <i class="fa fa-pencil m-r-5"></i>Edit
                                                             </a>
                                                             <!-- Delete Action -->
-                                                            <a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                                            <a class="dropdown-item mb-2" href="#" data-bs-toggle="modal"
                                                                 data-bs-target="#deleteProgressModal">
                                                                 <i class="fa fa-trash m-r-5"></i> Delete
                                                             </a>
@@ -406,12 +406,12 @@
                                                         </a>
                                                         <div class="dropdown-menu dropdown-menu-right">
                                                             <!-- Edit Action -->
-                                                            <a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                                            <a class="dropdown-item mb-2" href="#" data-bs-toggle="modal"
                                                                 data-bs-target="#editProgressModal">
                                                                 <i class="fa fa-pencil m-r-5"></i>Edit
                                                             </a>
                                                             <!-- Delete Action -->
-                                                            <a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                                            <a class="dropdown-item mb-2" href="#" data-bs-toggle="modal"
                                                                 data-bs-target="#deleteProgressModal">
                                                                 <i class="fa fa-trash m-r-5"></i> Delete
                                                             </a>
@@ -434,12 +434,12 @@
                                                         </a>
                                                         <div class="dropdown-menu dropdown-menu-center">
                                                             <!-- Edit Action -->
-                                                            <a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                                            <a class="dropdown-item mb-2" href="#" data-bs-toggle="modal"
                                                                 data-bs-target="#editProgressModal">
                                                                 <i class="fa fa-pencil m-r-5"></i>Edit
                                                             </a>
                                                             <!-- Delete Action -->
-                                                            <a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                                            <a class="dropdown-item mb-2" href="#" data-bs-toggle="modal"
                                                                 data-bs-target="#deleteProgressModal">
                                                                 <i class="fa fa-trash m-r-5"></i> Delete
                                                             </a>
@@ -462,12 +462,12 @@
                                                         </a>
                                                         <div class="dropdown-menu dropdown-menu-right">
                                                             <!-- Edit Action -->
-                                                            <a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                                            <a class="dropdown-item mb-2" href="#" data-bs-toggle="modal"
                                                                 data-bs-target="#editProgressModal">
                                                                 <i class="fa fa-pencil m-r-5"></i>Edit
                                                             </a>
                                                             <!-- Delete Action -->
-                                                            <a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                                            <a class="dropdown-item mb-2" href="#" data-bs-toggle="modal"
                                                                 data-bs-target="#deleteProgressModal">
                                                                 <i class="fa fa-trash m-r-5"></i> Delete
                                                             </a>
@@ -475,9 +475,6 @@
                                                     </div>
                                                 </td>
                                             </tr>
-
-                                            
-
                                         </tbody>
                                     </table>
                                 </div>
@@ -489,103 +486,22 @@
 
 
 
-            <footer class="footer">
+            <!-- <footer class="footer">
                 <div class="d-sm-flex justify-content-center justify-content-sm-between">
 
                     <span class="float-none float-sm-end d-block mt-1 mt-sm-0 text-center">Copyright
                         © 2023. All rights
                         reserved.</span>
                 </div>
-            </footer>
+            </footer> -->
 
 
-            <!--add interview progress model-->
-            <!-- <div class="modal fade" id="addProgressModal" tabindex="-1" aria-labelledby="addProgressModalLabel" aria-hidden="true">
-                <div class="modal-dialog" style="max-width:50% !important;">
-                    <div class="modal-content">
-                        <div class="modal-header" style="background-color: rgb(63, 63, 155); border-radius: 12px;">
-                            <h5 class="modal-title" id="addProgressModalLabel" style="color: antiquewhite;">Add
-                                Interview Progress
-                            </h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-
-                        <div class="col-lg-12 grid-margin stretch-card">
-                            <div class="card">
-                                <div class="card-body">
-                                    <form class="forms-sample material-form bordered">
-                                        <div class="row">
-                                            <div class="col-lg-6">
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control" id="candidate-name"
-                                                        required="required" />
-                                                    <label for="candidate-name" class="control-label">Candidate
-                                                        Name</label><i class="bar"></i>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control" id="candidate-position"
-                                                        required="required" />
-                                                    <label for="candidate-position" class="control-label">Candidte
-                                                        Position</label><i class="bar"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control" id="company-name"
-                                                        required="required" />
-                                                    <label for="company-name" class="control-label">Company
-                                                        Name</label><i class="bar"></i>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <select class="form-select" id="interview-status"
-                                                        required="required" style="height: 45px;">
-                                                        <option selected disabled>Select Interview Status</option>
-                                                        <option value="Scheduled">Scheduled</option>
-                                                        <option value="Completed">Completed</option>
-                                                        <option value="Passed">Passed</option>
-                                                        <option value="Rejected">Rejected</option>
-                                                        <option value="On Hold">On Hold</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control" id="feedback"
-                                                        required="required" />
-                                                    <label for="feedback" class="control-label">Feedback</label><i
-                                                        class="bar"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="button-container text-end">
-                                            <button type="submit"
-                                                class="button btn btn-primary"><span>Submit</span></button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-
+           
 
             <!--Edit interview progress model-->
             <div class="modal fade" id="editProgressModal" tabindex="-1" aria-labelledby="editProgressModalLabel"
                 aria-hidden="true">
-                <div class="modal-dialog" style="max-width:50% !important;">
+                <div class="modal-dialog" style="max-width:60% !important;">
                     <div class="modal-content">
                         <div class="modal-header" style="background-color: rgb(63, 63, 155); border-radius: 12px;">
                             <h5 class="modal-title" id="editProgressModalLabel" style="color: antiquewhite;">Edit

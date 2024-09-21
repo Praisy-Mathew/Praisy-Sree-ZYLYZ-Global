@@ -139,11 +139,11 @@
 
     </nav>
     <!-- partial -->
-    
+
     <div class="container-fluid page-body-wrapper" style="margin-left: 250px; padding-top: 110px;">
         <!-- partial:partials/_sidebar.html -->
-        <nav class="sidebar sidebar-offcanvas" id="sidebar" 
-             style="position: fixed; top: 0; left: 0; height: 100%; width: 250px; z-index: 1000;  overflow-y: auto; padding-top: 110px;">
+        <nav class="sidebar sidebar-offcanvas" id="sidebar"
+            style="position: fixed; top: 0; left: 0; height: 100%; width: 250px; z-index: 1000;  overflow-y: auto; padding-top: 110px;">
             <ul class="nav">
                 <li class="nav-item">
                     <a class="nav-link" href="index.html">
@@ -157,7 +157,7 @@
                         <span class="menu-title">New Invoice </span>
                     </a>
                 </li>
-                
+
                 <li class="nav-item">
                     <a class="nav-link" href="candidate.html">
                         <i class="menu-icon fas fa-user-tie"></i>
@@ -170,7 +170,7 @@
                         <span class="menu-title">Clients</span>
                     </a>
                 </li>
-               
+
                 <li class="nav-item">
                     <a class="nav-link" href="scheduling.html">
                         <i class="menu-icon fas fa-calendar-alt"></i>
@@ -185,7 +185,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="user.html">
-                        <i class="menu-icon fas fa-person"></i>
+                        <i class="menu-icon fas fa-user"></i>
                         <span class="menu-title">User</span>
                     </a>
                 </li>
@@ -238,27 +238,41 @@
                                                 <td>Emily Smith</td>
                                                 <td>
                                                     <div class="dropdown">
-                                                        <button class="btn btn-secondary dropdown-toggle btn-sm" type="button" id="statusDropdown1" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #dc3545; border-color: #dc3545; color: #fff;">
+                                                        <button class="btn btn-secondary dropdown-toggle btn-sm"
+                                                            type="button" id="statusDropdown1" data-bs-toggle="dropdown"
+                                                            aria-expanded="false"
+                                                            style="background-color: #dc3545; border-color: #dc3545; color: #fff;">
                                                             <span id="statusText1">Pending</span>
                                                         </button>
                                                         <ul class="dropdown-menu" aria-labelledby="statusDropdown1">
-                                                            <li><a class="dropdown-item" href="#" onclick="selectStatus(this, 'Pending', 'badge badge-danger', '#dc3545')">Pending</a></li>
-                                                            <li><a class="dropdown-item" href="#" onclick="selectStatus(this, 'In Progress', 'badge badge-success', '#28a745')">In Progress</a></li>
-                                                           
-                                                            <li><a class="dropdown-item" href="#" onclick="selectStatus(this, 'Completed', 'badge badge-primary', '#007bff')">Completed</a></li>
+                                                            <li><a class="dropdown-item" href="#"
+                                                                    onclick="selectStatus(this, 'Pending', 'badge badge-danger', '#dc3545')">Pending</a>
+                                                            </li>
+                                                            <li><a class="dropdown-item" href="#"
+                                                                    onclick="selectStatus(this, 'In Progress', 'badge badge-success', '#28a745')">In
+                                                                    Progress</a></li>
+
+                                                            <li><a class="dropdown-item" href="#"
+                                                                    onclick="selectStatus(this, 'Completed', 'badge badge-primary', '#007bff')">Completed</a>
+                                                            </li>
                                                         </ul>
                                                     </div>
                                                 </td>
                                                 <td class="text-center">
                                                     <div class="dropdown dropdown-action">
-                                                        <a href="#" class="" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <a href="#" class="" data-bs-toggle="dropdown"
+                                                            aria-expanded="false">
                                                             <i class="fa fa-ellipsis-v"></i>
                                                         </a>
                                                         <div class="dropdown-menu dropdown-menu-right">
-                                                            <a class="dropdown-item mb-2" href="#" data-bs-toggle="modal" data-bs-target="#editCandidateModal">
+                                                            <a class="dropdown-item mb-2" href="#"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#editCandidateModal">
                                                                 <i class="fa fa-pencil m-r-5"></i> Edit
                                                             </a>
-                                                            <a class="dropdown-item mb-2" href="#" data-bs-toggle="modal" data-bs-target="#deleteCandidateModal">
+                                                            <a class="dropdown-item mb-2" href="#"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#deleteCandidateModal">
                                                                 <i class="fa fa-trash m-r-5"></i> Delete
                                                             </a>
                                                             <a class="dropdown-item" href="#">
@@ -282,26 +296,40 @@
                                                 <td>David</td>
                                                 <td>
                                                     <div class="dropdown">
-                                                        <button class="btn btn-secondary dropdown-toggle btn-sm" type="button" id="statusDropdown2" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #28a745; border-color: #28a745; color: #fff;">
+                                                        <button class="btn btn-secondary dropdown-toggle btn-sm"
+                                                            type="button" id="statusDropdown2" data-bs-toggle="dropdown"
+                                                            aria-expanded="false"
+                                                            style="background-color: #28a745; border-color: #28a745; color: #fff;">
                                                             <span id="statusText2">Approved</span>
                                                         </button>
                                                         <ul class="dropdown-menu" aria-labelledby="statusDropdown2">
-                                                            <li><a class="dropdown-item" href="#" onclick="selectStatus(this, 'Pending', 'badge badge-danger', '#dc3545')">Pending</a></li>
-                                                            <li><a class="dropdown-item" href="#" onclick="selectStatus(this, 'In Progress', 'badge badge-success', '#28a745')">In Progress</a></li>
-                                                            <li><a class="dropdown-item" href="#" onclick="selectStatus(this, 'Completed', 'badge badge-primary', '#007bff')">Completed</a></li>
+                                                            <li><a class="dropdown-item" href="#"
+                                                                    onclick="selectStatus(this, 'Pending', 'badge badge-danger', '#dc3545')">Pending</a>
+                                                            </li>
+                                                            <li><a class="dropdown-item" href="#"
+                                                                    onclick="selectStatus(this, 'In Progress', 'badge badge-success', '#28a745')">In
+                                                                    Progress</a></li>
+                                                            <li><a class="dropdown-item" href="#"
+                                                                    onclick="selectStatus(this, 'Completed', 'badge badge-primary', '#007bff')">Completed</a>
+                                                            </li>
                                                         </ul>
                                                     </div>
                                                 </td>
                                                 <td class="text-center">
                                                     <div class="dropdown dropdown-action">
-                                                        <a href="#" class="" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <a href="#" class="" data-bs-toggle="dropdown"
+                                                            aria-expanded="false">
                                                             <i class="fa fa-ellipsis-v"></i>
                                                         </a>
                                                         <div class="dropdown-menu dropdown-menu-right">
-                                                            <a class="dropdown-item mb-2" href="#" data-bs-toggle="modal" data-bs-target="#editCandidateModal">
+                                                            <a class="dropdown-item mb-2" href="#"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#editCandidateModal">
                                                                 <i class="fa fa-pencil m-r-5"></i> Edit
                                                             </a>
-                                                            <a class="dropdown-item mb-2" href="#" data-bs-toggle="modal" data-bs-target="#deleteCandidateModal">
+                                                            <a class="dropdown-item mb-2" href="#"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#deleteCandidateModal">
                                                                 <i class="fa fa-trash m-r-5"></i> Delete
                                                             </a>
                                                             <a class="dropdown-item" href="#">
@@ -325,26 +353,40 @@
                                                 <td>David Wilson</td>
                                                 <td>
                                                     <div class="dropdown">
-                                                        <button class="btn btn-secondary dropdown-toggle btn-sm" type="button" id="statusDropdown3" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #ffc107; border-color: #ffc107; color: #fff;">
+                                                        <button class="btn btn-secondary dropdown-toggle btn-sm"
+                                                            type="button" id="statusDropdown3" data-bs-toggle="dropdown"
+                                                            aria-expanded="false"
+                                                            style="background-color: #ffc107; border-color: #ffc107; color: #fff;">
                                                             <span id="statusText3">Rejected</span>
                                                         </button>
                                                         <ul class="dropdown-menu" aria-labelledby="statusDropdown3">
-                                                            <li><a class="dropdown-item" href="#" onclick="selectStatus(this, 'Pending', 'badge badge-danger', '#dc3545')">Pending</a></li>
-                                                            <li><a class="dropdown-item" href="#" onclick="selectStatus(this, 'In Progress', 'badge badge-success', '#28a745')">In Progress</a></li>
-                                                            <li><a class="dropdown-item" href="#" onclick="selectStatus(this, 'Completed', 'badge badge-primary', '#007bff')">Completed</a></li>
+                                                            <li><a class="dropdown-item" href="#"
+                                                                    onclick="selectStatus(this, 'Pending', 'badge badge-danger', '#dc3545')">Pending</a>
+                                                            </li>
+                                                            <li><a class="dropdown-item" href="#"
+                                                                    onclick="selectStatus(this, 'In Progress', 'badge badge-success', '#28a745')">In
+                                                                    Progress</a></li>
+                                                            <li><a class="dropdown-item" href="#"
+                                                                    onclick="selectStatus(this, 'Completed', 'badge badge-primary', '#007bff')">Completed</a>
+                                                            </li>
                                                         </ul>
                                                     </div>
                                                 </td>
                                                 <td class="text-center">
                                                     <div class="dropdown dropdown-action">
-                                                        <a href="#" class="" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <a href="#" class="" data-bs-toggle="dropdown"
+                                                            aria-expanded="false">
                                                             <i class="fa fa-ellipsis-v"></i>
                                                         </a>
                                                         <div class="dropdown-menu dropdown-menu-right">
-                                                            <a class="dropdown-item mb-2" href="#" data-bs-toggle="modal" data-bs-target="#editCandidateModal">
+                                                            <a class="dropdown-item mb-2" href="#"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#editCandidateModal">
                                                                 <i class="fa fa-pencil m-r-5"></i> Edit
                                                             </a>
-                                                            <a class="dropdown-item mb-2" href="#" data-bs-toggle="modal" data-bs-target="#deleteCandidateModal">
+                                                            <a class="dropdown-item mb-2" href="#"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#deleteCandidateModal">
                                                                 <i class="fa fa-trash m-r-5"></i> Delete
                                                             </a>
                                                             <a class="dropdown-item" href="#">
@@ -368,26 +410,40 @@
                                                 <td>Jessica Davis</td>
                                                 <td>
                                                     <div class="dropdown">
-                                                        <button class="btn btn-secondary dropdown-toggle btn-sm" type="button" id="statusDropdown4" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #007bff; border-color: #007bff; color: #fff;">
+                                                        <button class="btn btn-secondary dropdown-toggle btn-sm"
+                                                            type="button" id="statusDropdown4" data-bs-toggle="dropdown"
+                                                            aria-expanded="false"
+                                                            style="background-color: #007bff; border-color: #007bff; color: #fff;">
                                                             <span id="statusText4">Completed</span>
                                                         </button>
                                                         <ul class="dropdown-menu" aria-labelledby="statusDropdown4">
-                                                            <li><a class="dropdown-item" href="#" onclick="selectStatus(this, 'Pending', 'badge badge-danger', '#dc3545')">Pending</a></li>
-                                                            <li><a class="dropdown-item" href="#" onclick="selectStatus(this, 'In Progress', 'badge badge-success', '#28a745')">In Progress</a></li>
-                                                            <li><a class="dropdown-item" href="#" onclick="selectStatus(this, 'Completed', 'badge badge-primary', '#007bff')">Completed</a></li>
+                                                            <li><a class="dropdown-item" href="#"
+                                                                    onclick="selectStatus(this, 'Pending', 'badge badge-danger', '#dc3545')">Pending</a>
+                                                            </li>
+                                                            <li><a class="dropdown-item" href="#"
+                                                                    onclick="selectStatus(this, 'In Progress', 'badge badge-success', '#28a745')">In
+                                                                    Progress</a></li>
+                                                            <li><a class="dropdown-item" href="#"
+                                                                    onclick="selectStatus(this, 'Completed', 'badge badge-primary', '#007bff')">Completed</a>
+                                                            </li>
                                                         </ul>
                                                     </div>
                                                 </td>
                                                 <td class="text-center">
                                                     <div class="dropdown dropdown-action">
-                                                        <a href="#" class="" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <a href="#" class="" data-bs-toggle="dropdown"
+                                                            aria-expanded="false">
                                                             <i class="fa fa-ellipsis-v"></i>
                                                         </a>
                                                         <div class="dropdown-menu dropdown-menu-right">
-                                                            <a class="dropdown-item mb-2" href="#" data-bs-toggle="modal" data-bs-target="#editCandidateModal">
+                                                            <a class="dropdown-item mb-2" href="#"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#editCandidateModal">
                                                                 <i class="fa fa-pencil m-r-5"></i> Edit
                                                             </a>
-                                                            <a class="dropdown-item mb-2" href="#" data-bs-toggle="modal" data-bs-target="#deleteCandidateModal">
+                                                            <a class="dropdown-item mb-2" href="#"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#deleteCandidateModal">
                                                                 <i class="fa fa-trash m-r-5"></i> Delete
                                                             </a>
                                                             <a class="dropdown-item" href="#">
@@ -412,26 +468,40 @@
                                                 <td>Kevin Thomas</td>
                                                 <td>
                                                     <div class="dropdown">
-                                                        <button class="btn btn-secondary dropdown-toggle btn-sm" type="button" id="statusDropdown4" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #007bff; border-color: #007bff; color: #fff;">
+                                                        <button class="btn btn-secondary dropdown-toggle btn-sm"
+                                                            type="button" id="statusDropdown4" data-bs-toggle="dropdown"
+                                                            aria-expanded="false"
+                                                            style="background-color: #007bff; border-color: #007bff; color: #fff;">
                                                             <span id="statusText4">Pending</span>
                                                         </button>
                                                         <ul class="dropdown-menu" aria-labelledby="statusDropdown4">
-                                                            <li><a class="dropdown-item" href="#" onclick="selectStatus(this, 'Pending', 'badge badge-danger', '#dc3545')">Pending</a></li>
-                                                            <li><a class="dropdown-item" href="#" onclick="selectStatus(this, 'In Progress', 'badge badge-success', '#28a745')">In Progress</a></li>
-                                                            <li><a class="dropdown-item" href="#" onclick="selectStatus(this, 'Completed', 'badge badge-primary', '#007bff')">Completed</a></li>
+                                                            <li><a class="dropdown-item" href="#"
+                                                                    onclick="selectStatus(this, 'Pending', 'badge badge-danger', '#dc3545')">Pending</a>
+                                                            </li>
+                                                            <li><a class="dropdown-item" href="#"
+                                                                    onclick="selectStatus(this, 'In Progress', 'badge badge-success', '#28a745')">In
+                                                                    Progress</a></li>
+                                                            <li><a class="dropdown-item" href="#"
+                                                                    onclick="selectStatus(this, 'Completed', 'badge badge-primary', '#007bff')">Completed</a>
+                                                            </li>
                                                         </ul>
                                                     </div>
                                                 </td>
                                                 <td class="text-center">
                                                     <div class="dropdown dropdown-action">
-                                                        <a href="#" class="" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <a href="#" class="" data-bs-toggle="dropdown"
+                                                            aria-expanded="false">
                                                             <i class="fa fa-ellipsis-v"></i>
                                                         </a>
                                                         <div class="dropdown-menu dropdown-menu-right">
-                                                            <a class="dropdown-item mb-2" href="#" data-bs-toggle="modal" data-bs-target="#editCandidateModal">
+                                                            <a class="dropdown-item mb-2" href="#"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#editCandidateModal">
                                                                 <i class="fa fa-pencil m-r-5"></i> Edit
                                                             </a>
-                                                            <a class="dropdown-item mb-2" href="#" data-bs-toggle="modal" data-bs-target="#deleteCandidateModal">
+                                                            <a class="dropdown-item mb-2" href="#"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#deleteCandidateModal">
                                                                 <i class="fa fa-trash m-r-5"></i> Delete
                                                             </a>
                                                             <a class="dropdown-item" href="#">
@@ -444,7 +514,7 @@
                                                 </td>
                                             </tr>
                                         </tbody>
-                                        
+
                                     </table>
                                 </div>
                             </div>
@@ -473,207 +543,172 @@
                             <form class="forms-sample material-form bordered">
                                 <div class="row">
                                     <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="serial-number"
-                                                required="required" />
-                                            <label for="serial-number" class="control-label">SI No.</label><i
-                                                class="bar"></i>
-                                        </div>
+                                      <div class="form-group">
+                                        <input type="text" class="form-control" id="serial-number" required="required" />
+                                        <label for="serial-number" class="control-label">SI No.</label><i class="bar"></i>
+                                      </div>
                                     </div>
                                     <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <input type="date" class="form-control" id="date-enrollment"
-                                                required="required" />
-                                            <label for="date-enrollment" class="control-label">Date of
-                                                Enrollment</label><i class="bar"></i>
-                                        </div>
+                                      <div class="form-group">
+                                        <input type="date" class="form-control" id="date-enrollment" required="required" />
+                                        <label for="date-enrollment" class="control-label">Date of Enrollment</label><i class="bar"></i>
+                                      </div>
                                     </div>
-                                </div>
-                                <div class="row">
+                                  </div>
+                                  <div class="row">
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="position-role"
-                                                required="required" />
-                                            <label for="position-role" class="control-label">Position/Role</label><i
-                                                class="bar"></i>
-                                        </div>
+                                      <div class="form-group">
+                                        <input type="text" class="form-control" id="position-role" required="required" />
+                                        <label for="position-role" class="control-label">Position/Role</label><i class="bar"></i>
+                                      </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="primary-skill"
-                                                required="required" />
-                                            <label for="primary-skill" class="control-label">Primary Skill</label><i
-                                                class="bar"></i>
-                                        </div>
+                                      <div class="form-group">
+                                        <input type="text" class="form-control" id="primary-skill" required="required" />
+                                        <label for="primary-skill" class="control-label">Primary Skill</label><i class="bar"></i>
+                                      </div>
                                     </div>
-                                </div>
-                                <div class="row">
+                                  </div>
+                                  <div class="row">
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="name" required="required" />
-                                            <label for="name" class="control-label">Name</label><i class="bar"></i>
-                                        </div>
+                                      <div class="form-group">
+                                        <input type="text" class="form-control" id="name" required="required" />
+                                        <label for="name" class="control-label">Name</label><i class="bar"></i>
+                                      </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="total-experience"
-                                                required="required" />
-                                            <label for="total-experience" class="control-label">Total
-                                                Experience</label><i class="bar"></i>
-                                        </div>
+                                      <div class="form-group">
+                                        <input type="text" class="form-control" id="total-experience" required="required" />
+                                        <label for="total-experience" class="control-label">Total Experience</label><i class="bar"></i>
+                                      </div>
                                     </div>
-                                </div>
-                                <div class="row">
+                                  </div>
+                                  <div class="row">
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="current-org"
-                                                required="required" />
-                                            <label for="current-org" class="control-label">Current/Last
-                                                Organisation</label><i class="bar"></i>
-                                        </div>
+                                      <div class="form-group">
+                                        <input type="text" class="form-control" id="current-org" required="required" />
+                                        <label for="current-org" class="control-label">Current/Last Organisation</label><i class="bar"></i>
+                                      </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="current-designation"
-                                                required="required" />
-                                            <label for="current-designation" class="control-label">Current
-                                                Designation</label><i class="bar"></i>
-                                        </div>
+                                      <div class="form-group">
+                                        <input type="text" class="form-control" id="current-designation" required="required" />
+                                        <label for="current-designation" class="control-label">Current Designation</label><i class="bar"></i>
+                                      </div>
                                     </div>
-                                </div>
-                                <div class="row">
+                                  </div>
+                                  <div class="row">
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="contact-number"
-                                                required="required" />
-                                            <label for="contact-number" class="control-label">Contact Number</label><i
-                                                class="bar"></i>
-                                        </div>
+                                      <div class="form-group">
+                                        <input type="text" class="form-control" id="contact-number" required="required" />
+                                        <label for="contact-number" class="control-label">Contact Number</label><i class="bar"></i>
+                                      </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" id="email-id"
-                                                required="required" />
-                                            <label for="email-id" class="control-label">Email ID</label><i
-                                                class="bar"></i>
-                                        </div>
+                                      <div class="form-group">
+                                        <input type="email" class="form-control" id="email-id" required="required" />
+                                        <label for="email-id" class="control-label">Email ID</label><i class="bar"></i>
+                                      </div>
                                     </div>
-                                </div>
-                                <div class="row">
+                                  </div>
+                                  <div class="row">
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="current-salary"
-                                                required="required" />
-                                            <label for="current-salary" class="control-label">Current Salary</label><i
-                                                class="bar"></i>
-                                        </div>
+                                      <div class="form-group">
+                                        <input type="text" class="form-control" id="current-salary" required="required" />
+                                        <label for="current-salary" class="control-label">Current Salary</label><i class="bar"></i>
+                                      </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="expected-salary"
-                                                required="required" />
-                                            <label for="expected-salary" class="control-label">Expected Salary</label><i
-                                                class="bar"></i>
-                                        </div>
+                                      <div class="form-group">
+                                        <input type="text" class="form-control" id="expected-salary" required="required" />
+                                        <label for="expected-salary" class="control-label">Expected Salary</label><i class="bar"></i>
+                                      </div>
                                     </div>
-                                </div>
-                                <div class="row">
+                                  </div>
+                                  <div class="row">
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="notice-period"
-                                                required="required" />
-                                            <label for="notice-period" class="control-label">Notice Period</label><i
-                                                class="bar"></i>
-                                        </div>
+                                      <div class="form-group">
+                                        <input type="text" class="form-control" id="notice-period" required="required" />
+                                        <label for="notice-period" class="control-label">Notice Period</label><i class="bar"></i>
+                                      </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="current-location"
-                                                required="required" />
-                                            <label for="current-location" class="control-label">Current
-                                                Location</label><i class="bar"></i>
-                                        </div>
+                                      <div class="form-group">
+                                        <input type="text" class="form-control" id="current-location" required="required" />
+                                        <label for="current-location" class="control-label">Current Location</label><i class="bar"></i>
+                                      </div>
                                     </div>
-                                </div>
-                                <div class="row">
+                                  </div>
+                                  <div class="row">
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="preferred-location"
-                                                required="required" />
-                                            <label for="preferred-location" class="control-label">Preferred
-                                                Location</label><i class="bar"></i>
-                                        </div>
+                                      <div class="form-group">
+                                        <input type="text" class="form-control" id="preferred-location" required="required" />
+                                        <label for="preferred-location" class="control-label">Preferred Location</label><i class="bar"></i>
+                                      </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="interview-availability"
-                                                required="required" />
-                                            <label for="interview-availability" class="control-label">Interview
-                                                Availability</label><i class="bar"></i>
-                                        </div>
+                                      <div class="form-group">
+                                        <input type="text" class="form-control" id="interview-availability" required="required" />
+                                        <label for="interview-availability" class="control-label">Interview Availability</label><i class="bar"></i>
+                                      </div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <select class="form-control" id="client" style="height: 35px;">
-                                                <option selected disabled>Select Client</option>
-                                                <option value="TCS">TCS</option>
-                                                <option value="Infosys">Infosys</option>
-                                                <option value="Google">Google</option>
-                                                <option value="Wipro">Wipro</option>
-                                            </select>
-                                        </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-4">
+                                      <div class="form-group">
+                                        <select class="form-control" id="client" style="height: 35px;">
+                                          <option selected disabled>Select Client</option>
+                                          <option value="TCS">TCS</option>
+                                          <option value="Infosys">Infosys</option>
+                                          <option value="Google">Google</option>
+                                          <option value="Wipro">Wipro</option>
+                                      </select>
+                                      </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <select class="form-select" id="recruiter" style="height: 35px;">
-                                                <option selected disabled>Select Recruiter</option>
-                                                <option value="Recruiter 1">John</option>
-                                                <option value="Recruiter 2">Ann</option>
-                                                <option value="Recruiter 3">David</option>
-                                                <option value="Recruiter 4">Neha</option>
-                                            </select>
-                                        </div>
+                                    <div class="col-md-4">
+                                      <div class="form-group">
+                                        <select class="form-select" id="recruiter" style="height: 35px;">
+                                          <option selected disabled>Select Recruiter</option>
+                                          <option value="Recruiter 1">John</option>
+                                          <option value="Recruiter 2">Ann</option>
+                                          <option value="Recruiter 3">David</option>
+                                          <option value="Recruiter 4">Neha</option>
+                                      </select>
+                                      </div>
                                     </div>
-                                    <!-- <div class="col-md-4">
-                                        <div class="form-group">
-                                            <select class="form-select" id="recruiter" style="height: 35px;">
-                                                <option selected disabled>Select Status</option>
-                                                <option value="completed">Completed</option>
-                                                <option value="in progress">In Progress</option>
-                                                <option value="pending">Pending</option>
-                                            </select>
-                                        </div>
-                                    </div> -->
-                                </div>
-                                <div class="row">
+                                    <div class="col-md-4">
+                                      <div class="form-group">
+                                        <select class="form-select" id="recruiter" style="height: 35px;">
+                                          <option selected disabled>Select Status</option>
+                                          <option value="completed">Completed</option>
+                                          <option value="in progress">In Progress</option>
+                                          <option value="pending">Pending</option>
+                                      </select>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row">
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="cv-upload" class="control-label"></label>
-                                            <div class="custom-file">
-                                                <input type="file" class="custom-file-input" id="cv-upload"
-                                                    style="display:none;" />
-                                                <label for="cv-upload" class="custom-file-label btn btn">Upload
-                                                    CV</label>
-                                            </div>
+                                      <div class="form-group">
+                                        <label for="cv-upload" class="control-label"></label>
+                                        <div class="custom-file">
+                                          <input type="file" class="custom-file-input" id="cv-upload" style="display:none;" />
+                                          <label for="cv-upload" class="custom-file-label btn btn">Upload CV</label>
                                         </div>
+                                      </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <textarea class="form-control" id="feedback" rows="3"
-                                                required="required"></textarea>
-                                            <label for="feedback" class="control-label">Feedback</label><i
-                                                class="bar"></i>
-                                        </div>
+                                      <div class="form-group">
+                                        <textarea class="form-control" id="feedback" rows="3" required="required"></textarea>
+                                        <label for="feedback" class="control-label">Feedback</label><i class="bar"></i>
+                                      </div>
                                     </div>
-                                </div>
-                                <div class="button-container">
-                                    <span style="margin-left:25px ;">
-                                        <button type="button"
-                                            class="button btn btn-primary"><span>Submit</span></button>
-                                    </span>
-                                </div>
+                                  </div>
+                              <div class="button-container text-end">
+                                <span style="margin-left:25px ;"> 
+                                <button type="button" class="button btn btn-primary"><span>Submit</span></button>
+                                </span>
+                              </div>
                             </form>
                         </div>
                     </div>
@@ -699,208 +734,172 @@
                             <form class="forms-sample material-form bordered">
                                 <div class="row">
                                     <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="serial-number"
-                                                required="required" />
-                                            <label for="serial-number" class="control-label">SI No.</label><i
-                                                class="bar"></i>
-                                        </div>
+                                      <div class="form-group">
+                                        <input type="text" class="form-control" id="serial-number" required="required" />
+                                        <label for="serial-number" class="control-label">SI No.</label><i class="bar"></i>
+                                      </div>
                                     </div>
                                     <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <input type="date" class="form-control" id="date-enrollment"
-                                                required="required" />
-                                            <label for="date-enrollment" class="control-label">Date of
-                                                Enrollment</label><i class="bar"></i>
-                                        </div>
+                                      <div class="form-group">
+                                        <input type="date" class="form-control" id="date-enrollment" required="required" />
+                                        <label for="date-enrollment" class="control-label">Date of Enrollment</label><i class="bar"></i>
+                                      </div>
                                     </div>
-                                </div>
-                                <div class="row">
+                                  </div>
+                                  <div class="row">
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="position-role"
-                                                required="required" />
-                                            <label for="position-role" class="control-label">Position/Role</label><i
-                                                class="bar"></i>
-                                        </div>
+                                      <div class="form-group">
+                                        <input type="text" class="form-control" id="position-role" required="required" />
+                                        <label for="position-role" class="control-label">Position/Role</label><i class="bar"></i>
+                                      </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="primary-skill"
-                                                required="required" />
-                                            <label for="primary-skill" class="control-label">Primary Skill</label><i
-                                                class="bar"></i>
-                                        </div>
+                                      <div class="form-group">
+                                        <input type="text" class="form-control" id="primary-skill" required="required" />
+                                        <label for="primary-skill" class="control-label">Primary Skill</label><i class="bar"></i>
+                                      </div>
                                     </div>
-                                </div>
-                                <div class="row">
+                                  </div>
+                                  <div class="row">
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="name" required="required" />
-                                            <label for="name" class="control-label">Name</label><i class="bar"></i>
-                                        </div>
+                                      <div class="form-group">
+                                        <input type="text" class="form-control" id="name" required="required" />
+                                        <label for="name" class="control-label">Name</label><i class="bar"></i>
+                                      </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="total-experience"
-                                                required="required" />
-                                            <label for="total-experience" class="control-label">Total
-                                                Experience</label><i class="bar"></i>
-                                        </div>
+                                      <div class="form-group">
+                                        <input type="text" class="form-control" id="total-experience" required="required" />
+                                        <label for="total-experience" class="control-label">Total Experience</label><i class="bar"></i>
+                                      </div>
                                     </div>
-                                </div>
-                                <div class="row">
+                                  </div>
+                                  <div class="row">
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="current-org"
-                                                required="required" />
-                                            <label for="current-org" class="control-label">Current/Last
-                                                Organisation</label><i class="bar"></i>
-                                        </div>
+                                      <div class="form-group">
+                                        <input type="text" class="form-control" id="current-org" required="required" />
+                                        <label for="current-org" class="control-label">Current/Last Organisation</label><i class="bar"></i>
+                                      </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="current-designation"
-                                                required="required" />
-                                            <label for="current-designation" class="control-label">Current
-                                                Designation</label><i class="bar"></i>
-                                        </div>
+                                      <div class="form-group">
+                                        <input type="text" class="form-control" id="current-designation" required="required" />
+                                        <label for="current-designation" class="control-label">Current Designation</label><i class="bar"></i>
+                                      </div>
                                     </div>
-                                </div>
-                                <div class="row">
+                                  </div>
+                                  <div class="row">
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="contact-number"
-                                                required="required" />
-                                            <label for="contact-number" class="control-label">Contact Number</label><i
-                                                class="bar"></i>
-                                        </div>
+                                      <div class="form-group">
+                                        <input type="text" class="form-control" id="contact-number" required="required" />
+                                        <label for="contact-number" class="control-label">Contact Number</label><i class="bar"></i>
+                                      </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" id="email-id"
-                                                required="required" />
-                                            <label for="email-id" class="control-label">Email ID</label><i
-                                                class="bar"></i>
-                                        </div>
+                                      <div class="form-group">
+                                        <input type="email" class="form-control" id="email-id" required="required" />
+                                        <label for="email-id" class="control-label">Email ID</label><i class="bar"></i>
+                                      </div>
                                     </div>
-                                </div>
-                                <div class="row">
+                                  </div>
+                                  <div class="row">
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="current-salary"
-                                                required="required" />
-                                            <label for="current-salary" class="control-label">Current Salary</label><i
-                                                class="bar"></i>
-                                        </div>
+                                      <div class="form-group">
+                                        <input type="text" class="form-control" id="current-salary" required="required" />
+                                        <label for="current-salary" class="control-label">Current Salary</label><i class="bar"></i>
+                                      </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="expected-salary"
-                                                required="required" />
-                                            <label for="expected-salary" class="control-label">Expected Salary</label><i
-                                                class="bar"></i>
-                                        </div>
+                                      <div class="form-group">
+                                        <input type="text" class="form-control" id="expected-salary" required="required" />
+                                        <label for="expected-salary" class="control-label">Expected Salary</label><i class="bar"></i>
+                                      </div>
                                     </div>
-                                </div>
-                                <div class="row">
+                                  </div>
+                                  <div class="row">
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="notice-period"
-                                                required="required" />
-                                            <label for="notice-period" class="control-label">Notice Period</label><i
-                                                class="bar"></i>
-                                        </div>
+                                      <div class="form-group">
+                                        <input type="text" class="form-control" id="notice-period" required="required" />
+                                        <label for="notice-period" class="control-label">Notice Period</label><i class="bar"></i>
+                                      </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="current-location"
-                                                required="required" />
-                                            <label for="current-location" class="control-label">Current
-                                                Location</label><i class="bar"></i>
-                                        </div>
+                                      <div class="form-group">
+                                        <input type="text" class="form-control" id="current-location" required="required" />
+                                        <label for="current-location" class="control-label">Current Location</label><i class="bar"></i>
+                                      </div>
                                     </div>
-                                </div>
-                                <div class="row">
+                                  </div>
+                                  <div class="row">
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="preferred-location"
-                                                required="required" />
-                                            <label for="preferred-location" class="control-label">Preferred
-                                                Location</label><i class="bar"></i>
-                                        </div>
+                                      <div class="form-group">
+                                        <input type="text" class="form-control" id="preferred-location" required="required" />
+                                        <label for="preferred-location" class="control-label">Preferred Location</label><i class="bar"></i>
+                                      </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="interview-availability"
-                                                required="required" />
-                                            <label for="interview-availability" class="control-label">Interview
-                                                Availability</label><i class="bar"></i>
-                                        </div>
+                                      <div class="form-group">
+                                        <input type="text" class="form-control" id="interview-availability" required="required" />
+                                        <label for="interview-availability" class="control-label">Interview Availability</label><i class="bar"></i>
+                                      </div>
                                     </div>
-                                </div>
-                                <div class="row">
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-4">
+                                      <div class="form-group">
+                                        <select class="form-control" id="client" style="height: 35px;">
+                                          <option selected disabled>Select Client</option>
+                                          <option value="TCS">TCS</option>
+                                          <option value="Infosys">Infosys</option>
+                                          <option value="Google">Google</option>
+                                          <option value="Wipro">Wipro</option>
+                                      </select>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                      <div class="form-group">
+                                        <select class="form-select" id="recruiter" style="height: 35px;">
+                                          <option selected disabled>Select Recruiter</option>
+                                          <option value="Recruiter 1">John</option>
+                                          <option value="Recruiter 2">Ann</option>
+                                          <option value="Recruiter 3">David</option>
+                                          <option value="Recruiter 4">Neha</option>
+                                      </select>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                      <div class="form-group">
+                                        <select class="form-select" id="recruiter" style="height: 35px;">
+                                          <option selected disabled>Select Status</option>
+                                          <option value="completed">Completed</option>
+                                          <option value="in progress">In Progress</option>
+                                          <option value="pending">Pending</option>
+                                      </select>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row">
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <select class="form-control" id="client" style="height: 35px;">
-                                                <option selected disabled>Select Client</option>
-                                                <option value="TCS">TCS</option>
-                                                <option value="Infosys">Infosys</option>
-                                                <option value="Google">Google</option>
-                                                <option value="Wipro">Wipro</option>
-                                            </select>
+                                      <div class="form-group">
+                                        <label for="cv-upload" class="control-label"></label>
+                                        <div class="custom-file">
+                                          <input type="file" class="custom-file-input" id="cv-upload" style="display:none;" />
+                                          <label for="cv-upload" class="custom-file-label btn btn">Upload CV</label>
                                         </div>
+                                      </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <select class="form-select" id="recruiter" style="height: 35px;">
-                                                <option selected disabled>Select Recruiter</option>
-                                                <option value="Recruiter 1">John</option>
-                                                <option value="Recruiter 2">Ann</option>
-                                                <option value="Recruiter 3">David</option>
-                                                <option value="Recruiter 4">Neha</option>
-                                            </select>
-                                        </div>
+                                      <div class="form-group">
+                                        <textarea class="form-control" id="feedback" rows="3" required="required"></textarea>
+                                        <label for="feedback" class="control-label">Feedback</label><i class="bar"></i>
+                                      </div>
                                     </div>
-                                    <!-- <div class="col-md-4">
-                                        <div class="form-group">
-                                            <select class="form-select" id="recruiter" style="height: 35px;">
-                                                <option selected disabled>Select Status</option>
-                                                <option value="completed">Completed</option>
-                                                <option value="in progress">In Progress</option>
-                                                <option value="pending">Pending</option>
-                                            </select>
-                                        </div>
-                                    </div> -->
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="cv-upload" class="control-label"></label>
-                                            <div class="custom-file">
-                                                <input type="file" class="custom-file-input" id="cv-upload"
-                                                    style="display:none;" />
-                                                <label for="cv-upload" class="custom-file-label btn btn">Upload
-                                                    CV</label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <textarea class="form-control" id="feedback" rows="3"
-                                                required="required"></textarea>
-                                            <label for="feedback" class="control-label">Feedback</label><i
-                                                class="bar"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="button-container">
-                                    <span style="margin-left:25px ;">
-                                        <button type="button" class="button btn btn-primary"><span>Save
-                                                Changes</span></button>
-                                    </span>
-                                </div>
+                                  </div>
+                              <div class="button-container text-end">
+                                <span style="margin-left:25px ;"> 
+                                <button type="button" class="button btn btn-primary"><span>Submit</span></button>
+                                </span>
+                              </div>
                             </form>
                         </div>
                     </div>
@@ -967,43 +966,43 @@
     <script src="assets/js/dashboard.js"></script>
     <!-- <script src="assets/js/Chart.roundedBarCharts.js"></script> -->
     <!-- End custom js for this page-->
-     
-<script>
-    function updateClock() {
-        const clockElement = document.getElementById('clock');
-        const now = new Date();
 
-        // Get hours, minutes, and seconds
-        let hours = now.getHours();
-        let minutes = now.getMinutes();
-        let seconds = now.getSeconds();
-        let period = 'AM';
+    <script>
+        function updateClock() {
+            const clockElement = document.getElementById('clock');
+            const now = new Date();
 
-        // Convert to 12-hour format
-        if (hours >= 12) {
-            period = 'PM';
-            hours = hours > 12 ? hours - 12 : hours; // Convert 13-23 hours to 1-11 PM
+            // Get hours, minutes, and seconds
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            let seconds = now.getSeconds();
+            let period = 'AM';
+
+            // Convert to 12-hour format
+            if (hours >= 12) {
+                period = 'PM';
+                hours = hours > 12 ? hours - 12 : hours; // Convert 13-23 hours to 1-11 PM
+            }
+            if (hours === 0) {
+                hours = 12; // Midnight edge case (0:00 should be 12 AM)
+            }
+
+            // Ensure 2-digit format for minutes and seconds
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+
+            // Update clock display
+            clockElement.textContent = `${hours}:${minutes}:${seconds} ${period}`;
         }
-        if (hours === 0) {
-            hours = 12; // Midnight edge case (0:00 should be 12 AM)
-        }
 
-        // Ensure 2-digit format for minutes and seconds
-        minutes = minutes < 10 ? '0' + minutes : minutes;
-        seconds = seconds < 10 ? '0' + seconds : seconds;
+        // Update the clock every second
+        setInterval(updateClock, 1000);
 
-        // Update clock display
-        clockElement.textContent = `${hours}:${minutes}:${seconds} ${period}`;
-    }
+        // Initialize the clock display immediately
+        updateClock();
+    </script>
 
-    // Update the clock every second
-    setInterval(updateClock, 1000);
 
-    // Initialize the clock display immediately
-    updateClock();
-</script>
-
-   
 </body>
 
 </html>

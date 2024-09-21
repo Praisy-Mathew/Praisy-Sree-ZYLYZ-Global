@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Profile - Zylyz Global Consultant Pvt Ltd</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="assets/vendors/feather/feather.css">
+    <link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="assets/vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/vendors/typicons/typicons.css">
+    <link rel="stylesheet" href="assets/vendors/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/select.dataTables.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+       
+
+        .content {
+            margin-left: 260px;
+        }
+
+        .profile-container {
+            background-color: white;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+            padding: 20px;
+            margin-top: 10px;
+            margin-bottom: 40px;
+        }
+
+        .profile-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #007bff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 50px;
+            margin-right: 20px;
+        }
+
+        .label {
+            font-weight: bold;
+            color: black;
+        }
+
+        .info-value {
+            color: black;
+            font-weight: 400;
+        }
+
+        footer {
+            padding: 10px;
+            background-color: #343a40;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .app-toolbar {
+            padding-top: 5rem;
+        }
+
+        .page-heading {
+            font-weight: bolder;
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-details {
+            margin-left: 20px;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .tab-content {
+            padding: 15px;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            background-color: white;
+        }
+
+        .detail-row {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body class="with-welcome-text">
+    <div class="container-scroller">
+        <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row">
+            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
+                <div class="me-3">
+                    <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-bs-toggle="minimize">
+                        <span class="icon-menu"></span>
+                    </button>
+                </div>
+                <div>
+                    <a class="navbar-brand brand-logo" href="index.html">
+                        <h2>Zylyz</h2>
+                    </a>
+                    <a class="navbar-brand brand-logo-mini" href="index.html">
+                        <img src="assets/images/logo-mini.svg" alt="logo" />
+                    </a>
+                </div>
+            </div>
+            <div class="navbar-menu-wrapper d-flex align-items-top">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item d-none d-lg-block">
+                        <div id="clock-container" class="input-group date datepicker navbar-date-picker">
+                            <span class="input-group-addon input-group-prepend border-right">
+                                <i class="fas fa-clock input-group-text calendar-icon"></i>
+                            </span>
+                            <span id="clock" class="form-control">00:00:00</span>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <form class="search-form" action="#">
+                            <i class="icon-search"></i>
+                            <input type="search" class="form-control" placeholder="Search Here" title="Search here">
+                        </form>
+                    </li>
+                    <li class="nav-item dropdown d-none d-lg-block user-dropdown">
+                        <a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img class="img-xs rounded-circle" src="assets/images/faces/face8.jpg" alt="Profile image">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+                            <div class="dropdown-header text-center">
+                                <img class="img-md rounded-circle" src="assets/images/faces/face8.jpg" alt="Profile image">
+                                <p class="mb-1 mt-3 fw-semibold">Allen Moreno</p>
+                                <p class="fw-light text-muted mb-0">allenmoreno@gmail.com</p>
+                            </div>
+                            <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"></i> My Profile <span class="badge badge-pill badge-danger">1</span></a>
+                            <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-message-text-outline text-primary me-2"></i> Messages</a>
+                            <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-calendar-check-outline text-primary me-2"></i> Activity</a>
+                            <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-help-circle-outline text-primary me-2"></i> FAQ</a>
+                            <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>Sign Out</a>
+                        </div>
+                    </li>
+                </ul>
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-bs-toggle="offcanvas">
+                    <span class="mdi mdi-menu"></span>
+                </button>
+            </div>
+        </nav>
+
+        <div class="container-fluid page-body-wrapper">
+            <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="mdi mdi-grid-large menu-icon"></i>
+                            <span class="menu-title">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="invoice.html">
+                            <i class="menu-icon fas fa-file-invoice-dollar"></i>
+                            <span class="menu-title">New Invoice</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="manage.html">
+                            <i class="menu-icon fas fa-file-invoice-dollar"></i>
+                            <span class="menu-title">Manage Invoice</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="candidate.html">
+                            <i class="menu-icon fas fa-user-tie"></i>
+                            <span class="menu-title">Candidate</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="client.html">
+                            <i class="menu-icon fas fa-building"></i>
+                            <span class="menu-title">Client</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="scheduling.html">
+                            <i class="menu-icon fas fa-calendar-alt"></i>
+                            <span class="menu-title">Interview Schedule</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="setting.html">
+                            <i class="menu-icon fas fa-cog"></i>
+                            <span class="menu-title">Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="content">
+                <div class="app-main flex-column flex-row-fluid" id="kt_app_main">
+                    <div class="d-flex flex-column flex-column-fluid">
+                        <div id="kt_app_toolbar" class="app-toolbar">
+                            <div id="kt_app_toolbar_container" class="app-container container-fluid d-flex align-items-stretch">
+                                <div class="app-toolbar-wrapper d-flex flex-stack flex-wrap gap-4 w-100">
+                                    <div class="page-title d-flex flex-column gap-1 me-3 mb-2">
+                                        <h1 class="page-heading text-dark">Profile</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="kt_app_content" class="app-content flex-column-fluid">
+                            <div id="kt_app_content_container" class="app-container container-fluid d-flex justify-content-center align-items-center" style="height: auto; width: 100%;">
+                                <div class="profile-container mb-5 mb-xl-10">
+                                    <div class="profile-body pt-9 pb-0">
+                                        <div class="profile-header">
+                                            <div class="profile-image">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <div class="profile-details">
+                                                <h4 class="text-gray-900 fw-bold">Johnson</h4>
+                                                <p class="text-muted">React Developer</p>
+                                                <p class="text-muted">johnson@kt.com</p>
+                                            </div>
+                                        </div>
+
+                                        <ul class="nav nav-tabs mt-4" id="myTab" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link active" id="overview-tab" data-bs-toggle="tab" href="#overview" role="tab" aria-controls="overview" aria-selected="true">Overview</a>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link" id="settings-tab" data-bs-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Settings</a>
+                                            </li>
+                                        </ul>
+
+                                        <div class="tab-content mt-3" id="myTabContent">
+                                            <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview-tab">
+                                                <div class="section-title">Profile Details</div>
+                                                <div class="tab-content">
+                                                    <div class="row detail-row">
+                                                        <div class="col-lg-4 label">Full Name:</div>
+                                                        <div class="col-lg-8 info-value">Johnson</div>
+                                                    </div>
+                                                    <div class="row detail-row">
+                                                        <div class="col-lg-4 label">Company:</div>
+                                                        <div class="col-lg-8 info-value">Zylyz Global Consultant Pvt Ltd</div>
+                                                    </div>
+                                                    <div class="row detail-row">
+                                                        <div class="col-lg-4 label">Contact Number:</div>
+                                                        <div class="col-lg-8 info-value">044 3276 454 935</div>
+                                                    </div>
+                                                    <div class="row detail-row">
+                                                        <div class="col-lg-4 label">Company Site:</div>
+                                                        <div class="col-lg-8 info-value"><a href="#" class="text-primary">Zylyz.com</a></div>
+                                                    </div>
+                                                    <div class="row detail-row">
+                                                        <div class="col-lg-4 label">Country:</div>
+                                                        <div class="col-lg-8 info-value">Germany</div>
+                                                    </div>
+                                                    <div class="row detail-row">
+                                                        <div class="col-lg-4 label">Communication:</div>
+                                                        <div class="col-lg-8 info-value">Email, Phone</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                                                <div class="section-title">Settings Details</div>
+                                                <div class="tab-content">
+                                                    <p>This section includes the user's settings options, such as notification preferences, privacy settings, etc.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <footer>
+                    <div class="container">
+                        <span>&copy; 2023 Zylyz Global Consultant Pvt Ltd. All Rights Reserved.</span>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+        <!-- plugins:js -->
+        <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+        <script src="assets/js/bootstrap-datepicker.min.js"></script>
+        <!-- endinject -->
+        <!-- inject:js -->
+        <script src="assets/js/off-canvas.js"></script>
+        <script src="assets/js/hoverable-collapse.js"></script>
+        <script src="assets/js/template.js"></script>
+        <script src="assets/js/settings.js"></script>
+        <script src="assets/js/todolist.js"></script>
+        <!-- endinject -->
+
+        <script>
+            // Real-time clock
+            function updateClock() {
+                const now = new Date();
+                const timeString = now.toLocaleTimeString();
+                document.getElementById('clock').textContent = timeString;
+            }
+            setInterval(updateClock, 1000);
+            updateClock(); // Initial call
+        </script>
+    </body>
+</html>

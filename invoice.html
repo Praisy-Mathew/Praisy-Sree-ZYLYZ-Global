@@ -143,7 +143,7 @@
     <div class="container-fluid page-body-wrapper" style="margin-left: 250px; padding-top: 110px;">
         <!-- partial:partials/_sidebar.html -->
         <nav class="sidebar sidebar-offcanvas" id="sidebar" 
-             style="position: fixed; top: 0; left: 0; height: 100%; width: 250px; z-index: 1000;  overflow-y: auto; padding-top: 110px;">
+             style="position: fixed; top: 0; left: 0; height: 100%; width: 250px; z-index: 1000;  overflow-y: auto; padding-top: 110px;  background-color: #e9e6e6; color: #343a40;">
             <ul class="nav">
                 <li class="nav-item">
                     <a class="nav-link" href="index.html">
@@ -196,24 +196,14 @@
         <!-- Main Panel -->
         <div class="main-panel">
             <div class="content-wrapper">
-                <!-- Combined Form -->
-                <!-- <div class="mb-4  d-flex justify-content-end">
-                    <button type="button"  class="btn btn-secondary me-0" style="background-color: #1f3bb3; border-color: #1f3bb3;" onclick="window.location.href='manage.html' ">Manage Invoice</button>
-                </div> -->
-                <!-- <div class="mb-4 d-flex justify-content-between">
-                    <div></div> 
-                    <button type="button" class="btn btn-secondary" style="background-color: #1f3bb3; border-color: #1f3bb3; margin-right: 10px;" onclick="window.location.href='manage.html'">Manage Invoice</button>
-                </div>               -->
                 <div class="mb-4  d-flex justify-content-end">
                     <button type="button" class="btn btn-secondary me-4" style="background-color: #1f3bb3; border-color: #1f3bb3;" onclick="window.location.href='manage.html'">Manage Invoice</button>
-                </div>
-                
-                
+                </div>               
                 <div class="row">
                     <div class="col-lg-12 grid-margin stretch-card" style="max-width: 80%; margin: 0 auto; padding-left:20px;">
                         <div class="card">
                             <div class="card-body">
-                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                <!-- <div class="d-flex justify-content-between align-items-center mb-4">
                                     <h3 class="mb-0">Who is this Invoice to</h3>
                                     <div class="form-group d-flex align-items-center mb-0" style="flex: 0 0 40%; max-width: 40%;">
                                         <label for="invoice-number" class="col-sm-4 col-form-label mb-0" style="padding-right: 0;">Invoice Number</label>
@@ -221,7 +211,23 @@
                                             <input type="text" class="form-control" id="invoice-number" placeholder="INV-12345">
                                         </div>
                                     </div>
+                                   
+                                </div> -->
+                                
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <div class="form-group mb-0" style="flex: 0 0 30%; max-width: 30%;"> <!-- Reduced width for Invoice Number -->
+                                        <label for="invoice-number" class="col-form-label mb-0" style="padding-right: 0;">Invoice Number</label>
+                                        <input type="text" class="form-control" id="invoice-number" placeholder="INV-12345">
+                                    </div>
+                                    <div class="form-group mb-0" style="flex: 0 0 30%; max-width: 30%;"> <!-- Reduced width for Invoice Date -->
+                                        <label for="invoice-date" class="col-form-label mb-0" style="padding-left: 0;">Invoice Date</label>
+                                        <input type="date" class="form-control" id="invoice-date">
+                                    </div>
                                 </div>
+                                
+                                <h3 class="mb-0">Who is this Invoice to</h3><br>
+                                
+                                
                                 <form class="forms-sample">
                                     <div class="form-group row">
                                         <label for="name" class="col-sm-3 col-form-label">Name</label>
@@ -254,7 +260,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="date" class="col-sm-3 col-form-label">Date</label>
+                                        <label for="duedate" class="col-sm-3 col-form-label">Due Date</label>
                                         <div class="col-sm-9">
                                             <input type="date" class="form-control" id="date">
                                         </div>

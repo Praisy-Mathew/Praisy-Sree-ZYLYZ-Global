@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -189,6 +190,12 @@
                         <span class="menu-title">User</span>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pool.html">
+                        <i class="menu-icon fas fa-user"></i>
+                        <span class="menu-title">Pool</span>
+                    </a>
+                </li> 
             </ul>
         </nav>
 
@@ -309,8 +316,8 @@
         
                                     <div class="d-flex justify-content-end">
                                         <button type="button" class="btn btn-primary me-2" onclick="calculateInvoice()">Generate Invoice</button>
-                                        <button type="button" class="btn btn-primary me-2" onclick="printInvoice()">Print</button>
-                                        <button type="button" class="btn btn-primary" onclick="downloadInvoice()">Download</button>
+                                        <button type="button" class="btn btn-primary" onclick="previewFile()">Preview</button>
+                                        
                                     </div>
                                 </form>
                             </div>
@@ -450,7 +457,9 @@
             document.body.removeChild(a);
             URL.revokeObjectURL(url);
         }
-
+        function previewFile() {
+    window.open('HTML/main/invoice-2.html', '_blank');
+}
 
     </script>
 

@@ -152,6 +152,12 @@
                             <span class="menu-title">User</span>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pool.html">
+                            <i class="menu-icon fas fa-user"></i>
+                            <span class="menu-title">Pool</span>
+                        </a>
+                    </li> 
                 </ul>
             </nav>
 
@@ -277,6 +283,7 @@
     </div>
 
     <!-- plugins:js -->
+
     <script src="assets/vendors/js/vendor.bundle.base.js"></script>
     <script src="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
     <script src="assets/vendors/datatables.net/jquery.dataTables.js"></script>
@@ -291,51 +298,38 @@
     <script src="assets/js/todolist.js"></script>
     <script>
         function updateClock() {
-            const clockElement = document.getElementById('clock');
-            const now = new Date();
-
-            // Get hours, minutes, and seconds
-            let hours = now.getHours();
-            let minutes = now.getMinutes();
-            let seconds = now.getSeconds();
-            let period = 'AM';
-
-            // Convert to 12-hour format
-            if (hours >= 12) {
-                period = 'PM';
-                hours = hours > 12 ? hours - 12 : hours; // Convert 13-23 hours to 1-11 PM
-            }
-            if (hours === 0) {
-                hours = 12; // Midnight edge case (0:00 should be 12 AM)
-            }
-
-            // Ensure 2-digit format for minutes and seconds
-            minutes = minutes < 10 ? '0' + minutes : minutes;
-            seconds = seconds < 10 ? '0' + seconds : seconds;
-
-            // Update clock display
-            clockElement.textContent = `${hours}:${minutes}:${seconds} ${period}`;
+          const clockElement = document.getElementById('clock');
+          const now = new Date();
+      
+          // Get hours, minutes, and seconds
+          let hours = now.getHours();
+          let minutes = now.getMinutes();
+          let seconds = now.getSeconds();
+          let period = 'AM';
+      
+          // Convert to 12-hour format
+          if (hours >= 12) {
+            period = 'PM';
+            hours = hours > 12 ? hours - 12 : hours; // Convert 13-23 hours to 1-11 PM
+          }
+          if (hours === 0) {
+            hours = 12; // Midnight edge case (0:00 should be 12 AM)
+          }
+      
+          // Ensure 2-digit format for minutes and seconds
+          minutes = minutes < 10 ? '0' + minutes : minutes;
+          seconds = seconds < 10 ? '0' + seconds : seconds;
+      
+          // Update clock display
+          clockElement.textContent = `${hours}:${minutes}:${seconds} ${period}`;
         }
-
+      
         // Update the clock every second
         setInterval(updateClock, 1000);
-
+      
         // Initialize the clock display immediately
         updateClock();
-    </script>
-
-
-    <script>
-        function updateColor(select) {
-            if (select.value === 'active') {
-                select.style.backgroundColor = '#28a745';  // Green for Active
-                select.style.color = 'white';
-            } else if (select.value === 'inactive') {
-                select.style.backgroundColor = '#dc3545';  // Red for Inactive
-                select.style.color = 'white';
-            }
-        }
-    </script>
+      </script>
 </body>
 
 </html>

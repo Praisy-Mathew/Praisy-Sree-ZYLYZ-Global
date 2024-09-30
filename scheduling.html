@@ -193,17 +193,68 @@
 
                 <div class="filter-section d-flex justify-content-end mb-3">
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                        data-bs-target="#addCandidateModal">Add Schedule +</button>
+                        data-bs-target="#addScheduleModal">Add Schedule +</button>
                 </div>
 
                 <div class="row">
-                    <div class="col-lg-12 grid-margin stretch-card"> <!-- Changed col-lg-6 to col-lg-12 -->
+                    <div class="col-lg-12 grid-margin stretch-card">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Interview Schedule Table</h4>
-
-                                <div class="table-responsive">
-                                    <table class="table table-hover">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h4 class="card-title mb-0">Interview Schedule Table</h4>
+                                    <div class="d-flex align-items-center">
+                                        <div class="input-group me-2" style="width: 150px;">
+                                            <input type="text" id="searchInput" class="form-control" placeholder="Search here" style="height: 30px; font-size: 14px;">
+                                            <span class="input-group-text" style="height: 30px; padding: 5px;">
+                                                <i class="fa fa-search" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                        <div class="dropdown">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button" id="filterDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="height: 30px; display: flex; align-items: center; justify-content: center;">
+                                                Filter
+                                            </button>
+                
+                                            <ul class="dropdown-menu p-3" aria-labelledby="filterDropdown">
+                                                <!-- Name Filter -->
+                                                <div class="mb-2">
+                                                    <label for="monthFilter" class="form-label">Name:</label>
+                                                    <select id="monthFilter" class="form-select" style="height: 30px; font-size: 14px;">
+                                                        <option value="">Select Name</option>
+                                                    </select>
+                                                </div>
+                
+                                                <!-- Status Filter -->
+                                                <div class="mb-2">
+                                                    <label for="statusFilter" class="form-label">Status:</label>
+                                                    <select id="statusFilter" class="form-select" style="height: 30px; font-size: 14px;">
+                                                        <option value="">Select Status</option>
+                                                        <option value="active">Active</option>
+                                                        <option value="inactive">Inactive</option>
+                                                    </select>
+                                                </div>
+                
+                                                <!-- Role Filter -->
+                                                <div class="mb-2">
+                                                    <label for="positionFilter" class="form-label">Role:</label>
+                                                    <select id="positionFilter" class="form-select" style="height: 30px; font-size: 14px;">
+                                                        <option value="">Select Role</option>
+                                                        <option value="admin">Admin</option>
+                                                        <option value="recruiter">Recruiter</option>
+                                                        <option value="sales">Sales</option>
+                                                    </select>
+                                                </div>
+                
+                                                <!-- Apply Filter Button -->
+                                                <button class="btn btn-primary w-100 mt-2 d-flex justify-content-center align-items-center" type="button" style="height: 30px; font-size: 14px;">
+                                                    Apply Filter
+                                                </button>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
                                         <thead>
                                             <tr>
                                                 <th>Candidate</th>
@@ -255,7 +306,7 @@
                                                             </a>
                                                             <!-- Edit Action -->
                                                             <a class="action-item" href="#" data-bs-toggle="modal"
-                                                                data-bs-target="#editProgressModal" title="Edit"
+                                                                data-bs-target="#editScheduleModal" title="Edit"
                                                                 style="text-decoration: none; color: #333; padding: 8px; display: flex; align-items: center; border-radius: 4px;">
                                                                 <div
                                                                     style="width: 24px; height: 24px; border-radius: 50%; background-color: #e0e0e0; display: flex; justify-content: center; align-items: center;">
@@ -266,7 +317,7 @@
                                                             </a>
                                                             <!-- Delete Action -->
                                                             <a class="action-item" href="#" data-bs-toggle="modal"
-                                                                data-bs-target="#deleteProgressModal" title="Delete"
+                                                                data-bs-target="#deleteScheduleModal" title="Delete"
                                                                 style="text-decoration: none; color: #333; padding: 8px; display: flex; align-items: center; border-radius: 4px;">
                                                                 <div
                                                                     style="width: 24px; height: 24px; border-radius: 50%; background-color: #e0e0e0; display: flex; justify-content: center; align-items: center;">
@@ -321,7 +372,7 @@
                                                             </a>
                                                             <!-- Edit Action -->
                                                             <a class="action-item" href="#" data-bs-toggle="modal"
-                                                                data-bs-target="#editProgressModal" title="Edit"
+                                                                data-bs-target="#editScheduleModal" title="Edit"
                                                                 style="text-decoration: none; color: #333; padding: 8px; display: flex; align-items: center; border-radius: 4px;">
                                                                 <div
                                                                     style="width: 24px; height: 24px; border-radius: 50%; background-color: #e0e0e0; display: flex; justify-content: center; align-items: center;">
@@ -332,7 +383,7 @@
                                                             </a>
                                                             <!-- Delete Action -->
                                                             <a class="action-item" href="#" data-bs-toggle="modal"
-                                                                data-bs-target="#deleteProgressModal" title="Delete"
+                                                                data-bs-target="#deleteScheduleModal" title="Delete"
                                                                 style="text-decoration: none; color: #333; padding: 8px; display: flex; align-items: center; border-radius: 4px;">
                                                                 <div
                                                                     style="width: 24px; height: 24px; border-radius: 50%; background-color: #e0e0e0; display: flex; justify-content: center; align-items: center;">
@@ -389,7 +440,7 @@
                                                         </a>
                                                         <!-- Edit Action -->
                                                         <a class="action-item" href="#" data-bs-toggle="modal"
-                                                            data-bs-target="#editProgressModal" title="Edit"
+                                                            data-bs-target="#editScheduleModal" title="Edit"
                                                             style="text-decoration: none; color: #333; padding: 8px; display: flex; align-items: center; border-radius: 4px;">
                                                             <div
                                                                 style="width: 24px; height: 24px; border-radius: 50%; background-color: #e0e0e0; display: flex; justify-content: center; align-items: center;">
@@ -400,7 +451,7 @@
                                                         </a>
                                                         <!-- Delete Action -->
                                                         <a class="action-item" href="#" data-bs-toggle="modal"
-                                                            data-bs-target="#deleteProgressModal" title="Delete"
+                                                            data-bs-target="#deleteScheduleModal" title="Delete"
                                                             style="text-decoration: none; color: #333; padding: 8px; display: flex; align-items: center; border-radius: 4px;">
                                                             <div
                                                                 style="width: 24px; height: 24px; border-radius: 50%; background-color: #e0e0e0; display: flex; justify-content: center; align-items: center;">
@@ -452,7 +503,7 @@
                                                         </a>
                                                         <!-- Edit Action -->
                                                         <a class="action-item" href="#" data-bs-toggle="modal"
-                                                            data-bs-target="#editProgressModal" title="Edit"
+                                                            data-bs-target="#editScheduleModal" title="Edit"
                                                             style="text-decoration: none; color: #333; padding: 8px; display: flex; align-items: center; border-radius: 4px;">
                                                             <div
                                                                 style="width: 24px; height: 24px; border-radius: 50%; background-color: #e0e0e0; display: flex; justify-content: center; align-items: center;">
@@ -463,7 +514,7 @@
                                                         </a>
                                                         <!-- Delete Action -->
                                                         <a class="action-item" href="#" data-bs-toggle="modal"
-                                                            data-bs-target="#deleteProgressModal" title="Delete"
+                                                            data-bs-target="#deleteScheduleModal" title="Delete"
                                                             style="text-decoration: none; color: #333; padding: 8px; display: flex; align-items: center; border-radius: 4px;">
                                                             <div
                                                                 style="width: 24px; height: 24px; border-radius: 50%; background-color: #e0e0e0; display: flex; justify-content: center; align-items: center;">
@@ -520,7 +571,7 @@
                                                             </a>
                                                             <!-- Edit Action -->
                                                             <a class="action-item" href="#" data-bs-toggle="modal"
-                                                                data-bs-target="#editProgressModal" title="Edit"
+                                                                data-bs-target="#editScheduleModal" title="Edit"
                                                                 style="text-decoration: none; color: #333; padding: 8px; display: flex; align-items: center; border-radius: 4px;">
                                                                 <div
                                                                     style="width: 24px; height: 24px; border-radius: 50%; background-color: #e0e0e0; display: flex; justify-content: center; align-items: center;">
@@ -531,7 +582,7 @@
                                                             </a>
                                                             <!-- Delete Action -->
                                                             <a class="action-item" href="#" data-bs-toggle="modal"
-                                                                data-bs-target="#deleteProgressModal" title="Delete"
+                                                                data-bs-target="#deleteScheduleModal" title="Delete"
                                                                 style="text-decoration: none; color: #333; padding: 8px; display: flex; align-items: center; border-radius: 4px;">
                                                                 <div
                                                                     style="width: 24px; height: 24px; border-radius: 50%; background-color: #e0e0e0; display: flex; justify-content: center; align-items: center;">
@@ -586,7 +637,7 @@
                                                             </a>
                                                             <!-- Edit Action -->
                                                             <a class="action-item" href="#" data-bs-toggle="modal"
-                                                                data-bs-target="#editProgressModal" title="Edit"
+                                                                data-bs-target="#editScheduleModal" title="Edit"
                                                                 style="text-decoration: none; color: #333; padding: 8px; display: flex; align-items: center; border-radius: 4px;">
                                                                 <div
                                                                     style="width: 24px; height: 24px; border-radius: 50%; background-color: #e0e0e0; display: flex; justify-content: center; align-items: center;">
@@ -597,7 +648,7 @@
                                                             </a>
                                                             <!-- Delete Action -->
                                                             <a class="action-item" href="#" data-bs-toggle="modal"
-                                                                data-bs-target="#deleteProgressModal" title="Delete"
+                                                                data-bs-target="#deleteScheduleModal" title="Delete"
                                                                 style="text-decoration: none; color: #333; padding: 8px; display: flex; align-items: center; border-radius: 4px;">
                                                                 <div
                                                                     style="width: 24px; height: 24px; border-radius: 50%; background-color: #e0e0e0; display: flex; justify-content: center; align-items: center;">
@@ -631,6 +682,16 @@
                                                                     <!-- Reduced icon size -->
                                                                 </div>
                                                             </a>
+                                                             <!-- WhatsApp Action -->
+                                                             <a class="action-item" href="#" title="WhatsApp"
+                                                             style="text-decoration: none; color: #333; padding: 8px; display: flex; align-items: center; border-radius: 4px;">
+                                                             <div
+                                                                 style="width: 24px; height: 24px; border-radius: 50%; background-color: #e0e0e0; display: flex; justify-content: center; align-items: center;">
+                                                                 <i class="fa fa-whatsapp"
+                                                                     style="color: #333; font-size: 14px;"></i>
+                                                                 <!-- Reduced icon size -->
+                                                             </div>
+                                                         </a>
                                                             <!-- Call Action -->
                                                             <a class="action-item" href="#" title="Make a Call"
                                                                 style="text-decoration: none; color: #333; padding: 8px; display: flex; align-items: center; border-radius: 4px;">
@@ -641,20 +702,20 @@
                                                                     <!-- Reduced icon size -->
                                                                 </div>
                                                             </a>
-                                                            <!-- Edit Action -->
-                                                            <a class="action-item" href="#" data-bs-toggle="modal"
-                                                                data-bs-target="#editProgressModal" title="Edit"
-                                                                style="text-decoration: none; color: #333; padding: 8px; display: flex; align-items: center; border-radius: 4px;">
-                                                                <div
-                                                                    style="width: 24px; height: 24px; border-radius: 50%; background-color: #e0e0e0; display: flex; justify-content: center; align-items: center;">
-                                                                    <i class="fa fa-pencil"
-                                                                        style="color: #333; font-size: 14px;"></i>
-                                                                    <!-- Reduced icon size -->
-                                                                </div>
-                                                            </a>
+                                                              <!-- Edit Action -->
+                                                              <a class="action-item" href="#" data-bs-toggle="modal"
+                                                              data-bs-target="#editScheduleModal" title="Edit"
+                                                              style="text-decoration: none; color: #333; padding: 8px; display: flex; align-items: center; border-radius: 4px;">
+                                                              <div
+                                                                  style="width: 24px; height: 24px; border-radius: 50%; background-color: #e0e0e0; display: flex; justify-content: center; align-items: center;">
+                                                                  <i class="fa fa-pencil"
+                                                                      style="color: #333; font-size: 14px;"></i>
+                                                                  <!-- Reduced icon size -->
+                                                              </div>
+                                                          </a>
                                                             <!-- Delete Action -->
                                                             <a class="action-item" href="#" data-bs-toggle="modal"
-                                                                data-bs-target="#deleteProgressModal" title="Delete"
+                                                                data-bs-target="#deleteScheduleModal" title="Delete"
                                                                 style="text-decoration: none; color: #333; padding: 8px; display: flex; align-items: center; border-radius: 4px;">
                                                                 <div
                                                                     style="width: 24px; height: 24px; border-radius: 50%; background-color: #e0e0e0; display: flex; justify-content: center; align-items: center;">
@@ -681,12 +742,12 @@
     </div>
 
     <!-- Modal HTML -->
-    <div class="modal fade" id="addCandidateModal" tabindex="-1" aria-labelledby="addCandidateModalLabel"
+    <div class="modal fade" id="addScheduleModal" tabindex="-1" aria-labelledby="addScheduleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" style="max-width:60% !important;">
             <div class="modal-content">
                 <div class="modal-header" style="background-color: rgb(63, 63, 155); border-radius: 12px;">
-                    <h5 class="modal-title" id="addCandidateModalLabel" style="color: antiquewhite;">Add New Schedule
+                    <h5 class="modal-title" id="addScheduleModalLabel" style="color: antiquewhite;">Add New Schedule
                     </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -778,12 +839,12 @@
 
 
     <!-- Edit Candidate Modal -->
-    <div class="modal fade" id="editCandidateModal" tabindex="-1" aria-labelledby="editCandidateModalLabel"
+    <div class="modal fade" id="editScheduleModal" tabindex="-1" aria-labelledby="editScheduleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" style="max-width:60% !important;">
             <div class="modal-content">
                 <div class="modal-header" style="background-color: rgb(63, 63, 155); border-radius: 12px;">
-                    <h5 class="modal-title" id="editCandidateModalLabel" style="color: antiquewhite;">Edit Schedule</h5>
+                    <h5 class="modal-title" id="editScheduleModalLabel" style="color: antiquewhite;">Edit Schedule</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="col-lg-12 grid-margin stretch-card">
@@ -874,12 +935,13 @@
     </div>
     </div>
 
-    <div class="modal fade" id="deleteCandidateModal" tabindex="-1" aria-labelledby="deleteCandidateModalLabel"
+<!--delete model-->
+    <div class="modal fade" id="deleteScheduleModal" tabindex="-1" aria-labelledby="deleteScheduleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header" style="background-color: rgb(63, 63, 155); border-radius: 10px;">
-                    <h5 class="modal-title" id="deleteCandidateModalLabel" style="color: antiquewhite;">Delete Schedule
+                    <h5 class="modal-title" id="deleteScheduleModalLabel" style="color: antiquewhite;">Delete Schedule
                     </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
